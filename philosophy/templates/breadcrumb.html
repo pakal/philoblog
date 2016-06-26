@@ -1,0 +1,10 @@
+{% for ance in ancestors %}
+<li>
+    {% if forloop.first %}<span class="ion-home breadcrumb-home"></span>{% endif %}
+	{% if not forloop.last %}
+	<a href="{{ ance.get_absolute_url }}">{{ ance.get_menu_title }}</a>
+	{% else %}
+	<span class="active">{{ ance.get_menu_title }}</span>
+	{% endif %}
+</li>
+{% endfor %}

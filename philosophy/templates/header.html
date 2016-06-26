@@ -1,4 +1,6 @@
 {% load cms_tags staticfiles sekizai_tags menu_tags %}
+
+{% comment %}
 <!-- Begin Top Bar -->
 <div class="top-bar">
     <div class="container">
@@ -60,9 +62,10 @@
     </div><!-- /modal dialog -->
 </div><!-- /modal holder -->
 <!-- End Login -->
+{% endcomment %}
+
 
 <!-- Begin Navigation -->
-
 <div class="navbar-wrapper">
     <div class="navbar navbar-main" id="fixed-navbar">
         <div class="container">
@@ -70,9 +73,11 @@
                 <div class="col-sm-12 column-header">
                     <div class="navbar-header">
                         <!-- Brand -->
+                        {% comment %}
                         <a href="index.html" class="navbar-brand">
-                            <div class="css-logo"></div> <img src="images/logo.png" class="raleway-logo" alt="Raleway Responsive Parallax Bootstrap 3 Template">
+                            <div class="css-logo"></div> <img src="images/logo.png" class="raleway-logo" alt="">
                         </a>
+                        {% endcomment %}
                         <!-- Mobile Navigation -->
                         <!--button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
                             <span class="sr-only">Toggle navigation</span>
@@ -100,16 +105,14 @@
         <div class="row">
             <!-- Page Title -->
             <div class="col-sm-6 col-xs-12">
-                <h1>Blog</h1>
+                <h1>Tikami Philosophy</h1>
             </div>
 
             <!-- Breadcrumbs -->
             <div class="col-sm-6">
                 <ol class="breadcrumb">
-                    <li><span class="ion-home breadcrumb-home"></span><a href="index.html">Home</a></li>
-                    <li>Blog</li>
-                    <li>Sidebar Left</li>
-                </ol>
+                {% show_breadcrumb "breadcrumb.html" %}
+                </ol
             </div><!-- /column -->
         </div><!-- /row -->
     </div><!-- /container -->
