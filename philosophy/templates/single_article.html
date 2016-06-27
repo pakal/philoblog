@@ -18,20 +18,23 @@
     <!-- Blog Posts -->
     <div class="col-sm-8">
         <div class="blog-post mb40">
-            <div class="view image-hover-1 no-margin">
+            <div class="view image-hover-1 no-margin img-responsive-wrapper">
                 <!-- Blog Thumb -->
-                <img alt="..." src="images/backgrounds/stock10.jpg" class="img-responsive">
+                {% placeholder "illustration" %}
+                <!--img alt="..." src="https://static.pexels.com/photos/35094/pexels-photo.jpg" class="img-responsive" style="max-height: 100px"-->
+                {% comment %}
                 <div class="mask">
                     <div class="image-hover-content">
                         <!-- Zoom + Blog Link -->
-                        <a class="info image-zoom-link" href="images/projects/illustration1.jpg">
+                        <a class="info image-zoom-link" href="https://static.pexels.com/photos/35094/pexels-photo.jpg">
                             <div class="image-icon-holder"><span class="ion-ios7-search image-icons"></span></div>
                         </a>
-                        <a class="info" href="portfolio-single-project.html">
+                        <a class="info" href="{% page_url request.current_page %}">
                             <div class="image-icon-holder"><span class="ion-link image-icons"></span></div>
                         </a>
                     </div><!-- /image hover content -->
                 </div><!-- /mask-->
+                {% endcomment %}
             </div><!-- /image hover -->
             <div class="blog-post-holder">
                 <ul class="list-inline posted-info">
