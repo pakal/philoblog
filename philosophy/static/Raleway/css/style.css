@@ -74,6 +74,11 @@ div.document {
 	text-align: justify;
 }
 
+.rubric {
+	font-weight: bold;
+	margin-top: 20px;
+}
+
 ::selection {
 	background:#00B7EB; /* WebKit/Blink Browsers */
 	color:#fff;
