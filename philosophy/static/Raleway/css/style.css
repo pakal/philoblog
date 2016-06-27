@@ -58,9 +58,9 @@ Author:Denis Samardjiev
 -------------------------------------------------------------- */
 body {
 	background:#fff;
-	font:normal 14px 'Open Sans', sans-serif;
+	font:normal 15px 'Open Sans', sans-serif;
 	font-weight:300;
-	color:#616161;
+	color:#353131;
 	height:100%;
 	line-height:1.6;
 	min-height:100% !important;
@@ -68,6 +68,10 @@ body {
 
 html {
 	min-height:100% !important;
+}
+
+div.document {
+	text-align: justify;
 }
 
 ::selection {
@@ -273,9 +277,9 @@ ul.list-arrow-2 li:before {
     width:1.6em;
 }
 
-ul.list-arrow-2-color { list-style-type:none; }
-ul.list-arrow-2-color li { text-indent:-1.6em; }
-ul.list-arrow-2-color li:before {
+ul.simple, ul.list-arrow-2-color { list-style-type:none; }
+ul.simple li, ul.list-arrow-2-color li { text-indent:-1.6em; }
+ul.simple li:before, ul.list-arrow-2-color li:before {
 	font-family:FontAwesome;
     content:"\f0a9";
     float:left;
@@ -1435,9 +1439,9 @@ blockquote footer, blockquote small, blockquote .small {
 }
 blockquote {
 	background-color:#fafafa;
-	color:#8a8a8a;
+	color:#585858;
 	padding:25px 20px;
-	font-size:14px;
+	font-size:15px;
 }
 .quote-carousel-control .quote-carousel-arrow-left, 
 .quote-carousel-control .quote-carousel-arrow-right {
