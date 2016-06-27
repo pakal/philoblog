@@ -6,6 +6,7 @@ https://github.com/divio/djangocms-googlemap/archive/master.zip?1466929994.88391
 https://github.com/divio/djangocms-inherit/archive/master.zip?1466929994.883918
 https://github.com/divio/djangocms-link/archive/master.zip?1466929994.883918
 https://github.com/divio/djangocms-style/archive/master.zip?1466929994.883918
+djangocms_snippet
 easy_thumbnails
 django-filer>=0.9.12
 cmsplugin-filer>=0.10.2
