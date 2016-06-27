@@ -1,10 +1,11 @@
 {% extends "bases/base.html" %}
-{% load cms_tags %}
+{% load cms_tags i18n %}
 
 {% block title %}{% page_attribute "page_title" %}{% endblock title %}
 
 {% block content %}
 <div class="row">
+
     <!-- Sidebar -->
     <div class="col-sm-4">
         <div class="content-box content-box-bordered mt30-xs mb30">
@@ -36,9 +37,8 @@
             </div><!-- /image hover -->
             <div class="blog-post-holder">
                 <ul class="list-inline posted-info">
-                    <li>By <a href="#">Denis Samardjiev</a></li>
-                    <li>In <a href="#">Design</a></li>
-                    <li>Posted January 1, 2015</li>
+                    {% page_attribute "changed_date" as changed_date %}
+                    <li>Date: {{ changed_date|date:"SHORT_DATE_FORMAT" }}</li>
                 </ul>
                 <hr align="left" style="width:50px;" class="mt15 mb10">
 
