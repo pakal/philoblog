@@ -1,0 +1,30 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Pascal Chambon <chambon.pascal@gmail.com>, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-27 17:08+0200\n"
+"PO-Revision-Date: 2016-06-27 17:09+0200\n"
+"Last-Translator: Pascal Chambon <chambon.pascal@gmail.com>\n"
+"Language-Team: Pascal Chambon\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Virtaal 0.7.0\n"
+
+#: .\settings.py:159 .\settings.py:171
+msgid "fr"
+msgstr ""
+
+#: .\settings.py:160 .\settings.py:178
+msgid "en"
+msgstr ""
+
+#: .\templates\single_article.html:39
+msgid "Last edited:"
+msgstr "Dernière édition :"
