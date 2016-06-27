@@ -148,6 +148,7 @@ INSTALLED_APPS = [
     'djangocms_googlemap',
     'djangocms_inherit',
     'djangocms_link',
+    'cmsplugin_rst',
     'reversion',
     'philosophy'
 ]
