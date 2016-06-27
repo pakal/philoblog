@@ -9,9 +9,7 @@
     <!-- Sidebar -->
     <div class="col-sm-4">
         <div class="content-box content-box-bordered mt30-xs mb30">
-            <span class="ion-beaker bordered-icon-color bordered-icon-sm"></span>
-            <h4 class="pt15">Our Blog</h4>
-            <p class="no-margin">Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Integer a elit turpis. Phasellus non varius mi. Nullam elementum tincidunt massa, a pulvinar leo ultricies ut.</p>
+            {% placeholder "intro" %}
         </div>
 
         {% include "bases/siblings_menu.html" %}
@@ -38,7 +36,7 @@
             <div class="blog-post-holder">
                 <ul class="list-inline posted-info">
                     {% page_attribute "changed_date" as changed_date %}
-                    <li>Date: {{ changed_date|date:"SHORT_DATE_FORMAT" }}</li>
+                    <li>{% trans "Last edited:" %} {{ changed_date|date:"SHORT_DATE_FORMAT" }}</li>
                 </ul>
                 <hr align="left" style="width:50px;" class="mt15 mb10">
 
