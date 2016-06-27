@@ -1,0 +1,60 @@
+{% extends "bases/base.html" %}
+{% load cms_tags %}
+
+{% block title %}{% page_attribute "page_title" %}{% endblock title %}
+
+{% block content %}
+<div class="row">
+    <!-- Sidebar -->
+    <div class="col-sm-4">
+        <div class="content-box content-box-bordered mt30-xs mb30">
+            <span class="ion-beaker bordered-icon-color bordered-icon-sm"></span>
+            <h4 class="pt15">Our Blog</h4>
+            <p class="no-margin">Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Integer a elit turpis. Phasellus non varius mi. Nullam elementum tincidunt massa, a pulvinar leo ultricies ut.</p>
+        </div>
+
+        <div class="blog-heading"><h3>Navigate</h3></div>
+        <ul class="nav nav-pills nav-stacked mb30">
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="blog-posts-1.html">Blog</a></li>
+            <li><a href="portfolio-fixed-3-columns-circle.html">Our Work</a></li>
+            <li><a href="portfolio-fixed-about-us-team.html">The Team</a></li>
+            <li><a href="pages-contact-1.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Blog Posts -->
+    <div class="col-sm-8">
+        <div class="blog-post mb40">
+            <div class="view image-hover-1 no-margin">
+                <!-- Blog Thumb -->
+                <img alt="..." src="images/backgrounds/stock10.jpg" class="img-responsive">
+                <div class="mask">
+                    <div class="image-hover-content">
+                        <!-- Zoom + Blog Link -->
+                        <a class="info image-zoom-link" href="images/projects/illustration1.jpg">
+                            <div class="image-icon-holder"><span class="ion-ios7-search image-icons"></span></div>
+                        </a>
+                        <a class="info" href="portfolio-single-project.html">
+                            <div class="image-icon-holder"><span class="ion-link image-icons"></span></div>
+                        </a>
+                    </div><!-- /image hover content -->
+                </div><!-- /mask-->
+            </div><!-- /image hover -->
+            <div class="blog-post-holder">
+                <ul class="list-inline posted-info">
+                    <li>By <a href="#">Denis Samardjiev</a></li>
+                    <li>In <a href="#">Design</a></li>
+                    <li>Posted January 1, 2015</li>
+                </ul>
+                <hr align="left" style="width:50px;" class="mt15 mb10">
+
+                {% placeholder "content" %}
+
+                <a class="btn btn-rw btn-primary mt10" href="#">Read more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

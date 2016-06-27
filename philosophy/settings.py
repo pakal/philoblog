@@ -187,10 +187,11 @@ CMS_LANGUAGES = {
 CMS_TEMPLATES = (
     ## Customize this
     ('page.html', 'Page'),
-    ('feature.html', 'Page with Feature')
+    ('feature.html', 'Page with Feature'),
+    ('single_article.html', 'Single Article'),
 )
 
-CMS_PERMISSION = True
+CMS_PERMISSION = False
 
 CMS_PLACEHOLDER_CONF = {}
 
