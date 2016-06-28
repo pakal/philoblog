@@ -1,7 +1,7 @@
 {% extends "bases/base.html" %}
 {% load cms_tags i18n %}
 
-{% block "page_title" %}{% page_attribute "page_title" %} - {{ block.super }}{% endblock "page_title" %}
+{% block page_title %}{% page_attribute "page_title" %} - {{ block.super }}{% endblock page_title %}
 
 {% block title %}{% page_attribute "page_title" %}{% endblock title %}
 
