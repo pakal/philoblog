@@ -11,7 +11,7 @@
     <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
     <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <title>Raleway | Mega Bootstrap Template</title>
+    <title>{% block "page_title" %}{{ request.site.name }}{% endblock "page_title" %}</title>
 
     <!-- Royal Preloader CSS -->
     <!--link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}Raleway/css/royal_preloader.css"-->
@@ -24,13 +24,13 @@
 
     <!-- Stylesheets -->
     <link href="{{ STATIC_URL }}Raleway/css/bootstrap.min.css" rel="stylesheet">
-    <link href="{{ STATIC_URL }}Raleway/css/style.css" rel="stylesheet">
     <link href="{{ STATIC_URL }}Raleway/css/bootstrap-social.css" rel="stylesheet">
     <link href="{{ STATIC_URL }}Raleway/css/animate.min.css" rel="stylesheet">
     <link href="{{ STATIC_URL }}Raleway/css/owl.carousel.css" rel="stylesheet" >
     <link href="{{ STATIC_URL }}Raleway/css/jquery.snippet.css" rel="stylesheet">
     <link href="{{ STATIC_URL }}Raleway/css/buttons.css" rel="stylesheet">
-
+    <link href="{{ STATIC_URL }}Raleway/css/style.css" rel="stylesheet">
+    <link href="{{ STATIC_URL }}Raleway/css/customizations.css" rel="stylesheet">
     <!-- Style Switcher / remove for production -->
     <!--link href="{{ STATIC_URL }}Raleway/css/style-switcher.css" rel="stylesheet"-->
 
@@ -75,7 +75,7 @@
             <!-- Begin Content Section -->
             <section class="mt40 mb40">
                 <div class="container">
-                {% block content %}{% endblock content %}
+                {% block "content" %}{% endblock "content" %}
                 </div>
             </section><!-- /content -->
             <!-- End Content Section -->
