@@ -1,4 +1,5 @@
 import os
+
 gettext = lambda s: s
 
 """
@@ -13,40 +14,21 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.8/ref/settings/
 """
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+# Build paths inside the project like this: os.path.join(ROOT_DIR, ...)
 import os
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-#print("BASE_DIR", BASE_DIR)
+ROOT_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# print("ROOT_DIR", ROOT_DIR)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '2lz1(+lf)s-ubss^0_)x@pd=pl(vy&9gsw#yzt(d9!gkmu7ax6'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
-
 
 # Application definition
 
-
-
-
-
 ROOT_URLCONF = 'philosophy.urls'
 
-
-
 WSGI_APPLICATION = 'philosophy.wsgi.application'
-
-
-# Database
-# https://docs.djangoproject.com/en/1.8/ref/settings/#databases
-
 
 
 
@@ -63,24 +45,22 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+##MEDIA_ROOT = os.path.join(ROOT_DIR, 'media')
+##STATIC_ROOT = os.path.join(ROOT_DIR, 'static')
 
 STATICFILES_DIRS = (
 )
 SITE_ID = 1
 
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'philosophy', 'templates'),],
+        'DIRS': [os.path.join(ROOT_DIR, 'philosophy', 'templates'), ],
         'OPTIONS': {
             'context_processors': [
                 'django.contrib.auth.context_processors.auth',
@@ -104,9 +84,8 @@ TEMPLATES = [
     },
 ]
 
-
 MIDDLEWARE_CLASSES = [
-    'cms.middleware.utils.ApphookReloadMiddleware',
+    ## broken 'cms.middleware.utils.ApphookReloadMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -197,7 +176,7 @@ CMS_PERMISSION = False
 
 CMS_PLACEHOLDER_CONF = {}
 
-DATABASES = {
+_____DATABASES = {
     'default': {
         'CONN_MAX_AGE': 0,
         'ENGINE': 'django.db.backends.sqlite3',
@@ -210,7 +189,6 @@ DATABASES = {
 }
 
 MIGRATION_MODULES = {
-    
 }
 
 THUMBNAIL_PROCESSORS = (
