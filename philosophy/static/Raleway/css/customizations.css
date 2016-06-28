@@ -1,0 +1,41 @@
+body {
+	font:normal 15px 'Open Sans', sans-serif;
+	color:#353131;
+}
+
+div.document {
+	text-align: justify;
+}
+
+.rubric {
+	font-weight: bold;
+	margin-top: 20px;
+}
+
+.bold-text {
+	font-weight: bold;
+}
+
+.footnotes {
+	margin-top: 20px;
+	font-size: 0.8em;
+}
+
+blockquote {
+	color:#585858;
+	font-size:15px;
+}
+
+ul.simple { list-style-type:none; }
+ul.simple li { text-indent:-1.6em; }
+ul.simple li:before {
+	font-family:FontAwesome;
+    content:"\f0a9";
+    float:left;
+    color:#00B7EB;
+    width:1.6em;
+}
+
+.img-responsive-wrapper img {
+	width:100%;
+}
