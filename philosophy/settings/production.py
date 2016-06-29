@@ -2,6 +2,8 @@
 from .base import *
 import logging.config
 
+STATIC_URL = '/static/resources/'
+MEDIA_URL = '/static/media/'
 
 #TODO : add  'django.middleware.security.SecurityMiddleware' middleware,
 # add SSL everywhere, and add X-Content-Type-Options: nosniff to NGINX static server
