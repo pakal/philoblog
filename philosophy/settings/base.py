@@ -161,7 +161,8 @@ CMS_TEMPLATES = (
     ('single_article.html', 'Single Article'),
 )
 
-CMS_PERMISSION = False
+CMS_PERMISSION = True
+CMS_PUBLIC_FOR = True  #TO BE REMOVED LATER ONE
 
 CMS_PLACEHOLDER_CONF = {}
 
