@@ -73,6 +73,7 @@ TEMPLATES = [
 
 MIDDLEWARE_CLASSES = [
     ## broken 'cms.middleware.utils.ApphookReloadMiddleware',
+    'django.middleware.cache.UpdateCacheMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -85,7 +86,8 @@ MIDDLEWARE_CLASSES = [
     'cms.middleware.user.CurrentUserMiddleware',
     'cms.middleware.page.CurrentPageMiddleware',
     'cms.middleware.toolbar.ToolbarMiddleware',
-    'cms.middleware.language.LanguageCookieMiddleware'
+    'cms.middleware.language.LanguageCookieMiddleware',
+    'django.middleware.cache.FetchFromCacheMiddleware',
 ]
 
 INSTALLED_APPS = [
@@ -125,8 +127,8 @@ INSTALLED_APPS = [
 
 LANGUAGES = (
     ## Customize this
-    ('fr', gettext('fr')),
-    ('en', gettext('en')),
+    ('fr', gettext('French')),
+    ('en', gettext('English')),
 )
 
 CMS_LANGUAGES = {
