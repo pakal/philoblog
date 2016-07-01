@@ -39,3 +39,21 @@ ul.simple li:before {
 .img-responsive-wrapper img {
 	width:100%;
 }
+
+
+.filer_image {
+    margin: 3px;
+}
+img.left {
+    float: left;
+}
+img.right {
+    float: right;
+}
+img.center {
+    display: block;
+    margin: auto;
+}
+.filer_image_info {
+    display: none;
+}
