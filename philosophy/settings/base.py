@@ -131,7 +131,7 @@ INSTALLED_APPS = [
 LANGUAGES = (
     ## Customize this
     ('fr', gettext('French')),
-    ('en', gettext('English')),
+    #('en', gettext('English')),
 )
 
 CMS_LANGUAGES = {
@@ -144,13 +144,13 @@ CMS_LANGUAGES = {
             'public': True,
             'name': gettext('fr'),
         },
-        {
-            'redirect_on_fallback': True,
-            'code': 'en',
-            'hide_untranslated': False,
-            'public': True,
-            'name': gettext('en'),
-        },
+        #{
+        #    'redirect_on_fallback': True,
+        #    'code': 'en',
+        #    'hide_untranslated': False,
+        #    'public': True,
+        #    'name': gettext('en'),
+        #},
     ],
     'default': {
         'redirect_on_fallback': True,
@@ -166,7 +166,7 @@ CMS_TEMPLATES = (
 )
 
 CMS_PERMISSION = True
-CMS_PUBLIC_FOR = True  #TO BE REMOVED LATER ONE
+CMS_PUBLIC_FOR = "staff"   #TO BE REMOVED LATER ONE
 
 CMS_PLACEHOLDER_CONF = {}
 
