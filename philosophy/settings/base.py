@@ -120,6 +120,7 @@ INSTALLED_APPS = [
     'djangocms_inherit',
     'djangocms_link',
     'cmsplugin_rst',
+    'cmsplugin_raw_html',
     'softhyphen',
     'reversion',
     'compressor',
