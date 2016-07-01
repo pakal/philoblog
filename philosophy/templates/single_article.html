@@ -48,8 +48,10 @@
                 <h1>{% page_attribute "title" %}</h1>
 
                 {% placeholder "content" %}
-
                 {# <a class="btn btn-rw btn-primary mt10" href="#">Read more</a> #}
+                <div class="disqus-comments mt40">
+                    {% static_placeholder 'disqus-comments' %}
+                </div>
             </div>
         </div>
     </div>
