@@ -26,4 +26,4 @@ FILER_DEBUG = True
 FILER_ENABLE_LOGGING = True
 
 
-
+DISQUS_SHORTNAME = 'tikami-dev'

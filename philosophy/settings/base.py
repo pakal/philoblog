@@ -121,6 +121,7 @@ INSTALLED_APPS = [
     'djangocms_link',
     'cmsplugin_rst',
     'cmsplugin_raw_html',
+    'aldryn_disqus',
     'softhyphen',
     'reversion',
     'compressor',
