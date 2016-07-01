@@ -57,3 +57,15 @@ img.center {
 .filer_image_info {
     display: none;
 }
+
+
+blockquote.pull-quote {
+	float: left;
+	border-top: 1px solid #eee;
+	border-right: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	margin-right: 10px;
+}
+blockquote .attribution {
+	font-style: italic;
+}
