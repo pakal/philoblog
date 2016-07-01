@@ -67,3 +67,6 @@ if _enable_smtp:
     EMAIL_USE_TLS = env.bool("EMAIL_USE_TLS")
     EMAIL_USE_SSL = env.bool("EMAIL_USE_TLS")
 
+
+if ENVIRONMENT != "development":
+    from webfaction_common_prod_settings import *  # may override SMTP, cache etc.
