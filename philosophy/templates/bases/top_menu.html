@@ -3,7 +3,7 @@
 {% for child in children %}
 <li class="dropdown dropdown-main {# mega-dropdown #}
         {% if child.ancestor %}ancestor{% endif %}
-        {% if child.selected %} active{% endif %}
+        {% if child.selected %} {% endif %}
         {% if child.children %} dropdown{% endif %}">
 
         {% if child.children %}
