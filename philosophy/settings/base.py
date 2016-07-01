@@ -162,7 +162,6 @@ CMS_LANGUAGES = {
 CMS_TEMPLATES = (
     ## Customize this
     ('page.html', 'Page'),
-    ('feature.html', 'Page with Feature'),
     ('single_article.html', 'Single Article'),
 )
 
@@ -171,17 +170,6 @@ CMS_PUBLIC_FOR = True  #TO BE REMOVED LATER ONE
 
 CMS_PLACEHOLDER_CONF = {}
 
-_____DATABASES = {
-    'default': {
-        'CONN_MAX_AGE': 0,
-        'ENGINE': 'django.db.backends.sqlite3',
-        'HOST': 'localhost',
-        'NAME': 'project.db',
-        'PASSWORD': '',
-        'PORT': '',
-        'USER': ''
-    }
-}
 
 MIGRATION_MODULES = {
 }
