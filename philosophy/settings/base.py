@@ -120,6 +120,7 @@ INSTALLED_APPS = [
     'djangocms_inherit',
     'djangocms_link',
     'cmsplugin_rst',
+    'softhyphen',
     'reversion',
     'compressor',
     'philosophy'
@@ -197,3 +198,5 @@ COMPRESS_ENABLED = False
 COMPRESS_PRECOMPILERS = (
     # unused('text/x-scss', 'django_libsass.SassCompiler'),
 )
+
+TEXT_AUTO_HYPHENATE = True
