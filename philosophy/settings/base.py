@@ -200,3 +200,24 @@ COMPRESS_PRECOMPILERS = (
 )
 
 TEXT_AUTO_HYPHENATE = True
+
+
+## CKEDITOR SETTINGS ##
+#See http://docs.cksource.com/ckeditor_api/symbols/CKEDITOR.config.html for all settings
+
+CKEDITOR_SETTINGS = {
+            #'height': '320px',
+            'toolbar_CMS': [
+                ['Undo', 'Redo'],
+                ['cmsplugins', '-', 'ShowBlocks'],
+                ['Font', 'FontSize', 'Format', 'Styles'],
+                ['TextColor', 'BGColor', '-', 'PasteText', 'PasteFromWord'],
+                ['Maximize', ''],
+                '/',
+                ['Bold', 'Italic', 'Underline', '-', 'Subscript', 'Superscript', '-', 'RemoveFormat'],
+                ['CreateDiv', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
+                ['Link', 'Unlink'],
+                ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Table'],
+                ['Source']
+            ],
+}
