@@ -1,3 +1,4 @@
+{% load cms_tags %}
 <div class="container">
     {% comment %}
     <div class="row">
@@ -78,7 +79,7 @@
     <div class="row">
         <hr>
         <div class="col-sm-11 col-xs-10">
-            <p class="copyright">© 2016, Witty The Tikami</p>
+            <p class="copyright">{% static_placeholder 'copyright' %}</p>
         </div>
         <div class="col-sm-1 col-xs-2 text-right">
             <a href="#" class="scroll-top"><div class="footer-scrolltop-holder"><span class="ion-ios7-arrow-up footer-scrolltop"></span></div></a>
