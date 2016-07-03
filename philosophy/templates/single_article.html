@@ -1,5 +1,5 @@
 {% extends "bases/base_cms.html" %}
-{% load cms_tags i18n %}
+{% load cms_tags page_tags i18n %}
 
 
 {% block content %}
@@ -12,6 +12,8 @@
         </div>
 
         {% include "bases/siblings_menu.html" %}
+
+        {#% UNUSED ATM - include_title_tags request.current_page %#}
 
         <div class="twitter-feeds mt40 mb40">
             {% static_placeholder 'twitter-feeds' %}

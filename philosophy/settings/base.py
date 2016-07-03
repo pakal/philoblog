@@ -122,6 +122,11 @@ INSTALLED_APPS = [
     'cmsplugin_rst',
     'cmsplugin_raw_html',
     'aldryn_disqus',
+
+    'taggit',
+    'taggit_autosuggest',
+    'djangocms_page_tags',
+
     'softhyphen',
     'reversion',
     'compressor',
@@ -211,3 +216,5 @@ CKEDITOR_SETTINGS = {
                 ['Source']
             ],
 }
+
+TAGGIT_CASE_INSENSITIVE = True
