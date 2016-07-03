@@ -79,6 +79,11 @@ table.docutils th, table.docutils td {
 	border: 1px solid #d2d2d2;
 }
 
+.system-message {
+	border: 1px dotted red;
+	margin: 8px 0;
+}
+
 .twitter-feeds {
 	border: 1px solid rgba(15, 70, 100, 0.12)
 }
