@@ -4,11 +4,17 @@
 <html lang="{{ language_code }}">
 <head>
     <meta charset="utf-8"/>
-    <meta name="author" content="Denis Samardjiev" />
-    <meta name="description" content="Raleway | Mega Bootstrap Template">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <meta name="author" content="LeTikami" />
+    <meta name="description" content="{% trans "A philosophical and humanistic blog written by a Tikami" %}">
+    {% block metadata %}{% endblock metadata %}
+
     <link href="{{ STATIC_URL }}favicon_feather_sm.png" rel="shortcut icon" type="image/x-icon" />
     <title>{% block page_title %}{{ request.site.name }}{% endblock page_title %}</title>
+
+
+
 
     <!-- Royal Preloader CSS -->
     <!--link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}Raleway/css/royal_preloader.css"-->
