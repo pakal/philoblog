@@ -126,8 +126,11 @@ INSTALLED_APPS = [
     'taggit',
     'taggit_autosuggest',
     'djangocms_page_tags',
+    'terms',
 
-    'softhyphen',
+    # BREAKS django-terms, so don't use it
+    # and don't even install it: 'softhyphen',
+
     'reversion',
     'compressor',
     'philosophy'
@@ -194,8 +197,6 @@ COMPRESS_PRECOMPILERS = (
     # unused('text/x-scss', 'django_libsass.SassCompiler'),
 )
 
-TEXT_AUTO_HYPHENATE = True
-
 
 ## CKEDITOR SETTINGS ##
 #See http://docs.cksource.com/ckeditor_api/symbols/CKEDITOR.config.html for all settings
@@ -222,3 +223,8 @@ TAGGIT_CASE_INSENSITIVE = True
 
 CMSPLUGIN_RST_SETTINGS_OVERRIDES = {"initial_header_level": 3, # minimum "h2" when rendered to html
                                     "smart_quotes": "alt"}
+
+
+CMS_PLUGIN_PROCESSORS = (
+    'terms.cms_plugin_processors.TermsProcessor',
+)
