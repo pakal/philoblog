@@ -12,6 +12,14 @@ div.document {
 	margin-top: 20px;
 }
 
+.introduction {
+	font-weight: bold;
+}
+
+.conclusion {
+	font-weight: bold;
+}
+
 .bold-text {
 	font-weight: bold;
 }
@@ -29,11 +37,12 @@ blockquote {
 ul.simple { list-style-type:none; }
 ul.simple li { text-indent:-1.6em; }
 ul.simple li:before {
-	font-family:FontAwesome;
+    font-family:FontAwesome;
     content:"\f0a9";
     float:left;
     color:#00B7EB;
     width:1.6em;
+    line-height:1.4em;
 }
 
 .img-responsive-wrapper img {
@@ -61,10 +70,11 @@ img.center {
 
 blockquote.pull-quote {
 	float: left;
-	border-top: 1px solid #eee;
-	border-right: 1px solid #eee;
-	border-bottom: 1px solid #eee;
-	margin-right: 10px;
+	border-top: 2px solid #eee;
+	border-right: 2px solid #eee;
+	border-bottom: 2px solid #eee;
+	margin-right: 20px;
+	max-width: 300px;
 }
 blockquote .attribution {
 	font-style: italic;
