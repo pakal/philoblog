@@ -49,10 +49,6 @@ div.document {
 	font-size: 0.8em;
 }
 
-blockquote {
-	color:#585858;
-	font-size:15px;
-}
 
 ul.simple { list-style-type:none; }
 ul.simple li { text-indent:-1.6em; }
@@ -86,6 +82,10 @@ img.center {
     display: none;
 }
 
+blockquote {
+	color:#585858;
+	font-size:15px;
+}
 
 blockquote.pull-quote {
 	float: left;
@@ -107,6 +107,15 @@ table.docutils th, table.docutils td {
 	padding: 4px;
 	border: 1px solid #d2d2d2;
 }
+
+
+dt {
+	margin-top: 20px;
+}
+dd {
+	margin-left: 20px;
+}
+
 
 .system-message {
 	border: 1px dotted red;
