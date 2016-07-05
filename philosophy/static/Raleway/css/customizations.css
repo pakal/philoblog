@@ -3,6 +3,26 @@ body {
 	color:#353131;
 }
 
+h1 {
+	margin-top: 5px;
+	margin-bottom: 30px;
+}
+h2 {
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+h3 {
+	margin-top: 25px;
+	margin-bottom: 15px;
+}
+h4 {
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+.document p {
+	text-indent: 15px;
+}
+
 div.document {
 	text-align: justify;
 }
@@ -48,7 +68,6 @@ ul.simple li:before {
 .img-responsive-wrapper img {
 	width:100%;
 }
-
 
 .filer_image {
     margin: 3px;
