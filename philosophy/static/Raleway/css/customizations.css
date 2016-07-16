@@ -1,127 +1,148 @@
 body {
-	font:normal 15px 'Open Sans', sans-serif;
-	color:#353131;
+    font: normal 15px 'Open Sans', sans-serif;
+    color: #353131;
 }
 
 h1 {
-	margin-top: 5px;
-	margin-bottom: 30px;
+    margin-top: 5px;
+    margin-bottom: 30px;
 }
+
 h2 {
-	margin-top: 30px;
-	margin-bottom: 20px;
+    margin-top: 30px;
+    margin-bottom: 20px;
 }
+
 h3 {
-	margin-top: 25px;
-	margin-bottom: 15px;
+    margin-top: 25px;
+    margin-bottom: 15px;
 }
+
 h4 {
-	margin-top: 20px;
-	margin-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
+
 .document p {
-	text-indent: 15px;
+    text-indent: 15px;
 }
 
 div.document {
-	text-align: justify;
+    text-align: justify;
 }
 
 .rubric {
-	font-weight: bold;
-	margin-top: 20px;
+    font-weight: bold;
+    margin-top: 20px;
 }
 
 .introduction {
-	font-weight: bold;
+    font-weight: bold;
 }
 
 .conclusion {
-	font-weight: bold;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+.conclusion + .conclusion {
+    margin-top: 0;
 }
 
 .bold-text {
-	font-weight: bold;
+    font-weight: bold;
 }
 
 .footnotes {
-	margin-top: 20px;
-	font-size: 0.8em;
+    margin-top: 20px;
+    font-size: 0.8em;
 }
 
+ul.simple {
+    list-style-type: none;
+}
 
-ul.simple { list-style-type:none; }
-ul.simple li { text-indent:-1.6em; }
+ul.simple li {
+    text-indent: -1.6em;
+}
+
 ul.simple li:before {
-    font-family:FontAwesome;
-    content:"\f0a9";
-    float:left;
-    color:#00B7EB;
-    width:1.6em;
-    line-height:1.4em;
+    font-family: FontAwesome;
+    content: "\f0a9";
+    float: left;
+    color: #00B7EB;
+    width: 1.6em;
+    line-height: 1em;
+    font-size: 0.8em;
+    margin-top: 5px;
 }
 
 .img-responsive-wrapper img {
-	width:100%;
+    width: 100%;
 }
 
 .filer_image {
     margin: 3px;
 }
+
 img.left {
     float: left;
 }
+
 img.right {
     float: right;
 }
+
 img.center {
     display: block;
     margin: auto;
 }
+
 .filer_image_info {
     display: none;
 }
 
 blockquote {
-	color:#585858;
-	font-size:15px;
+    color: #585858;
+    font-size: 15px;
 }
 
 blockquote.pull-quote {
-	float: left;
-	border-top: 2px solid #eee;
-	border-right: 2px solid #eee;
-	border-bottom: 2px solid #eee;
-	margin-right: 20px;
-	max-width: 300px;
+    float: left;
+    border-top: 2px solid #eee;
+    border-right: 2px solid #eee;
+    border-bottom: 2px solid #eee;
+    margin: 10px 20px 10px 0;
+    max-width: 300px;
 }
+
 blockquote .attribution {
-	font-style: italic;
+    font-style: italic;
 }
 
 table.docutils {
-	width: 100%;
-	margin: 10px 0px 15px;
-}
-table.docutils th, table.docutils td {
-	padding: 4px;
-	border: 1px solid #d2d2d2;
+    width: 100%;
+    margin: 10px 0px 15px;
 }
 
+table.docutils th, table.docutils td {
+    padding: 4px;
+    border: 1px solid #d2d2d2;
+}
 
 dt {
-	margin-top: 20px;
-}
-dd {
-	margin-left: 20px;
+    margin-top: 20px;
 }
 
+dd {
+    margin-left: 20px;
+}
 
 .system-message {
-	border: 1px dotted red;
-	margin: 8px 0;
+    border: 1px dotted red;
+    margin: 8px 0;
 }
 
 .twitter-feeds {
-	border: 1px solid rgba(15, 70, 100, 0.12)
+    border: 1px solid rgba(15, 70, 100, 0.12)
 }
