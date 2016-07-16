@@ -228,3 +228,8 @@ CMSPLUGIN_RST_SETTINGS_OVERRIDES = {"initial_header_level": 3, # minimum "h2" wh
 CMS_PLUGIN_PROCESSORS = (
     'terms.cms_plugin_processors.TermsProcessor',
 )
+
+TERMS_ENABLED = True
+TERMS_DEFINITION_WIDGET = "auto"  # 'auto', 'basic', 'tinymce', and 'ckeditor'
+TERMS_REPLACE_FIRST_ONLY = True
+TERMS_ADDITIONAL_IGNORED_TAGS = ()  # lost of other similar settings exist
