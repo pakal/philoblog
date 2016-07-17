@@ -23,6 +23,11 @@ h4 {
     margin-bottom: 10px;
 }
 
+.btn-email{
+    color:#fff;
+    background-color:#3f729b;
+}
+
 .document p {
     text-indent: 15px;
 }
