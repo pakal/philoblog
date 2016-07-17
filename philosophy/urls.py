@@ -12,11 +12,18 @@ admin.autodiscover()
 
 urlpatterns = i18n_patterns('',
     url(r'^admin/', include(admin.site.urls)),  # NOQA
+
     url(r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap',
         {'sitemaps': {'cmspages': CMSSitemap}}),
+
     url(r'^select2/', include('django_select2.urls')),
+
     url(r'^taggit_autosuggest/', include('taggit_autosuggest.urls')),
     url(r'^glossary/', include('terms.urls')),
+
+    url(r'^newsletter/', include('newsletter.urls')),
+    url(r'^tinymce/', include('tinymce.urls')),
+
     url(r'^', include('cms.urls')),
 )
 

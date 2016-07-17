@@ -133,6 +133,11 @@ INSTALLED_APPS = [
 
     'reversion',
     'compressor',
+
+    'tinymce',
+    'django_extensions',
+    'newsletter',
+
     'philosophy'
 ]
 
@@ -233,3 +238,6 @@ TERMS_ENABLED = True
 TERMS_DEFINITION_WIDGET = "auto"  # 'auto', 'basic', 'tinymce', and 'ckeditor'
 TERMS_REPLACE_FIRST_ONLY = True
 TERMS_ADDITIONAL_IGNORED_TAGS = ()  # lost of other similar settings exist
+
+
+NEWSLETTER_RICHTEXT_WIDGET = "tinymce.widgets.TinyMCE"

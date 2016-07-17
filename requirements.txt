@@ -28,7 +28,10 @@ cmsplugin-rst>=0.2
 https://github.com/makukha/cmsplugin-raw-html/archive/master.zip
 aldryn_disqus==1.0.0
 djangocms-page-tags==0.4.2.post1
+
 django-terms
+django-newsletter
+django-tinymce
 
 django-reversion>=1.8.7,<1.9
 django-mptt<0.9
