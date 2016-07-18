@@ -73,7 +73,7 @@ TEMPLATES = [
 
 MIDDLEWARE_CLASSES = [
     ## broken 'cms.middleware.utils.ApphookReloadMiddleware',
-    'django.middleware.cache.UpdateCacheMiddleware',
+    ## SEEMS BUGGY 'django.middleware.cache.UpdateCacheMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -87,7 +87,7 @@ MIDDLEWARE_CLASSES = [
     'cms.middleware.page.CurrentPageMiddleware',
     'cms.middleware.toolbar.ToolbarMiddleware',
     'cms.middleware.language.LanguageCookieMiddleware',
-    'django.middleware.cache.FetchFromCacheMiddleware',
+    ## SEEMS BUGGY 'django.middleware.cache.FetchFromCacheMiddleware',
 ]
 
 INSTALLED_APPS = [
