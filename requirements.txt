@@ -14,6 +14,7 @@ django-treebeard>=4.0
 easy_thumbnails
 django-filer>=0.9.12
 django-compressor==2.0
+django-request
 
 https://github.com/divio/djangocms-column/archive/master.zip?1466929994.883918
 https://github.com/divio/djangocms-googlemap/archive/master.zip?1466929994.883918

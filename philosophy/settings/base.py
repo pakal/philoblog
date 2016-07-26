@@ -87,6 +87,7 @@ MIDDLEWARE_CLASSES = [
     'cms.middleware.page.CurrentPageMiddleware',
     'cms.middleware.toolbar.ToolbarMiddleware',
     'cms.middleware.language.LanguageCookieMiddleware',
+    'request.middleware.RequestMiddleware',  # AFTER auth stuffs
     ## SEEMS BUGGY 'django.middleware.cache.FetchFromCacheMiddleware',
 ]
 
@@ -100,6 +101,7 @@ INSTALLED_APPS = [
     'django.contrib.sitemaps',
     'django.contrib.staticfiles',
     'django.contrib.messages',
+
     'cms',
     'menus',
     'sekizai',
@@ -137,6 +139,8 @@ INSTALLED_APPS = [
     'tinymce',
     'django_extensions',
     'newsletter',
+
+    'request',  # analytics
 
     'philosophy'
 ]
