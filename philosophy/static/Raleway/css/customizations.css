@@ -159,5 +159,6 @@ dd {
 }
 
 .twitter-feeds {
+    padding: 1px; /* else bugs with borders on chrome... */
     border: 1px solid rgba(15, 70, 100, 0.12)
 }
