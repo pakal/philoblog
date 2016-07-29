@@ -58,10 +58,16 @@ div.document {
     font-weight: bold;
 }
 
+
+
 .footnotes {
-    margin-top: 20px;
+    margin-top: 35px;
     font-size: 0.8em;
 }
+.footnotes ~ .footnotes {
+    margin-top: 5px;  /* dirty hack - we abort margin for non-first footnotes */
+}
+
 
 ul.simple {
     list-style-type: none;
