@@ -1,0 +1,27 @@
+{% extends "bases/base_cms.html" %}
+{% load cms_tags page_tags i18n %}
+
+
+{% block content %}
+    <div class="row">
+
+        <!-- Sidebar -->
+        <div class="col-sm-3">
+
+            <div class="twitter-feeds mb40">
+                {% static_placeholder 'twitter-feeds' %}
+            </div>
+
+        </div>
+
+        <!-- Intro Content -->
+        <div class="col-sm-9">
+            <div class="blog-post mb40">
+                <div>
+                    {% placeholder "content" %}
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock content %}
