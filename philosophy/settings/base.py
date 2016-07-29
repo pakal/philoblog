@@ -239,7 +239,7 @@ CMS_PLUGIN_PROCESSORS = (
 )
 
 TERMS_ENABLED = True
-TERMS_DEFINITION_WIDGET = "auto"  # 'auto', 'basic', 'tinymce', and 'ckeditor'
+TERMS_DEFINITION_WIDGET = "basic"  # so that we can input html ; choices are 'auto', 'basic', 'tinymce', and 'ckeditor'
 TERMS_REPLACE_FIRST_ONLY = True
 TERMS_ADDITIONAL_IGNORED_TAGS = ()  # lost of other similar settings exist
 
