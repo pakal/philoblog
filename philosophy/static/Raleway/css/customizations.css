@@ -28,6 +28,10 @@ h4 {
     background-color:#3f729b;
 }
 
+.navbar-toggle {
+    margin-top: 24px;
+}
+
 .document p {
     text-indent: 15px;
 }
