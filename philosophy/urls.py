@@ -1,18 +1,28 @@
 # -*- coding: utf-8 -*-
 from __future__ import absolute_import, print_function, unicode_literals
 
-from cms.sitemaps import CMSSitemap
 from django.conf import settings
 from django.conf.urls import *  # NOQA
 from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from django.http import HttpResponse
 
 from djangocms_page_sitemap.sitemap import ExtendedSitemap
 
 admin.autodiscover()
 
+
+ROBOTS_TXT = """
+User-agent: *
+
+Sitemap: http://regard-humaniste.com/fr/sitemap.xml
+"""
+
 urlpatterns = i18n_patterns('',
+
+    url(r'^robots.txt$', lambda r: HttpResponse(ROBOTS_TXT)),
+
     url(r'^admin/', include(admin.site.urls)),  # NOQA
 
     url(r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap',
