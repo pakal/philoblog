@@ -11,6 +11,7 @@ h1 {
 h2 {
     margin-top: 30px;
     margin-bottom: 20px;
+    font-size: 25px;  /* was too big in bootstrap */
 }
 
 h3 {
