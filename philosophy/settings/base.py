@@ -124,6 +124,7 @@ INSTALLED_APPS = [
     'cmsplugin_rst',
     'cmsplugin_raw_html',
     'aldryn_disqus',
+    'djangocms_page_sitemap',
 
     'taggit',
     'taggit_autosuggest',
@@ -231,7 +232,7 @@ CKEDITOR_SETTINGS = {
 TAGGIT_CASE_INSENSITIVE = True
 
 
-CMSPLUGIN_RST_SETTINGS_OVERRIDES = {"initial_header_level": 3, # minimum "h2" when rendered to html
+CMSPLUGIN_RST_SETTINGS_OVERRIDES = {"initial_header_level": 2, # minimum "h2" when rendered to html
                                     "smart_quotes": "alt"}
 
 
