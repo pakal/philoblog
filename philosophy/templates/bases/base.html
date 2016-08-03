@@ -6,9 +6,11 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <meta name="author" content="LeTikami" />
+    <meta name="author" content="Le Tikami" />
+
+    {% block metadata %}
     <meta name="description" content="{% trans "A philosophical and humanistic blog written by a Tikami" %}">
-    {% block metadata %}{% endblock metadata %}
+    {% endblock metadata %}
 
     <link href="{{ STATIC_URL }}favicon_feather_sm.png" rel="shortcut icon" type="image/x-icon" />
     <title>{% block page_title %}{{ request.site.name }}{% endblock page_title %}</title>
