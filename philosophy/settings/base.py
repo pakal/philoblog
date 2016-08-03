@@ -202,7 +202,7 @@ THUMBNAIL_PROCESSORS = (
 
 ## Django-compressor settings
 
-COMPRESS_ENABLED = False
+COMPRESS_ENABLED = True
 
 COMPRESS_PRECOMPILERS = (
     # unused('text/x-scss', 'django_libsass.SassCompiler'),
