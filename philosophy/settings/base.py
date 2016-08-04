@@ -74,6 +74,7 @@ TEMPLATES = [
 MIDDLEWARE_CLASSES = [
     ## broken 'cms.middleware.utils.ApphookReloadMiddleware',
     ## SEEMS BUGGY 'django.middleware.cache.UpdateCacheMiddleware',
+    'philosophy.middlewares.ReverseProxyFixer',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
