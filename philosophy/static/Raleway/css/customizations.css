@@ -79,8 +79,8 @@ ul.simple {
 }
 
 ul.simple li {
-    text-indent: -1.6em;
-    line-height: 1.5em;
+    margin: 2px 0;
+    text-indent: -1em;
 }
 
 ul.simple li:before {
@@ -88,9 +88,9 @@ ul.simple li:before {
     content: "\f0a9";
     float: left;
     color: #00B7EB;
-    width: 1.8em;
-    line-height: 1em;
-    font-size: 0.7em;
+    width: 16px;
+    line-height: 0.95em;
+    font-size: 9px;
     margin-top: 5px;
 }
 
