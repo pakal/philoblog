@@ -27,7 +27,6 @@ djangocms-admin-style>=1.0.6
 djangocms-text-ckeditor>=2.8.1,<3.0
 cmsplugin-rst>=0.2
 https://github.com/makukha/cmsplugin-raw-html/archive/master.zip
-aldryn_disqus==1.0.0
 djangocms-page-tags==0.4.2.post1
 djangocms-page-sitemap==0.3.1
 
