@@ -84,6 +84,18 @@ div.document {
     margin-top: 5px;  /* dirty hack - we abort margin for non-first footnotes */
 }
 
+table.docutils.footnote {
+    margin: 0;
+    width: auto;
+    font-size: 90%;
+}
+table.docutils.footnote td {
+    border: none;
+}
+table.docutils.footnote .label {
+    width: 30px;
+    display: table-cell;
+}
 
 ul.simple {
     list-style-type: none;
