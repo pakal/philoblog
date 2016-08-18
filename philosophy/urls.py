@@ -5,6 +5,7 @@ from django.conf import settings
 from django.conf.urls import *  # NOQA
 from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
+from django.views.generic.base import RedirectView
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.http import HttpResponse
 
@@ -37,6 +38,11 @@ urlpatterns = i18n_patterns('',
     url(r'^tinymce/', include('tinymce.urls')),
 
     url(r'^', include('cms.urls')),
+)
+
+# WORKAROUND for cron jobs generating broken i18n urls - https://code.djangoproject.com/ticket/26271
+urlpatterns += patterns('',
+    url('^None/(?P<path>.*)$', RedirectView.as_view(url='/%(path)s', permanent=False)),
 )
 
 # This is only needed when using runserver.
