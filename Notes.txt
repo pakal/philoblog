@@ -1,0 +1,8 @@
+DEV NOTES
+==========
+
+- rst plugin displays "raw" content in edit mode, without django-terms annotations ; whereas normal text plugin directly displays "rendered" content ; it's all normal
+
+- django-terms doesn't support regexes in the list of term variants, alas ; so we must recognize use typography characters which might appear on final html, like curly quotes
+
+- django-newsletter cron tasks have problem with generating URLs, since they have no active language ; a fallback urlpattern has been added for now, until we update django
