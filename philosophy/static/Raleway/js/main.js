@@ -200,8 +200,11 @@ $(document).ready(function(){
         })
 });
 
+/* Menu Bar following the scrolling (DISABLED ATM)
+
 $('#fixed-navbar').affix({
     offset: {
         top: $('.top-bar').height()
     }   
 });
+*/
