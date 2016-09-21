@@ -8,3 +8,11 @@
 {% block metadata %}
 <meta name="description" content="{% page_attribute "meta_description" %}">
 {% endblock metadata %}
+
+{% block content %}
+{{ block.super }}
+<div style="display: none !important">
+{% static_placeholder 'hidden_content' %}
+</div>
+
+{% endblock content %}
