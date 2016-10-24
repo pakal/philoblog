@@ -3,6 +3,10 @@ body {
     color: #353131;
 }
 
+div.document {
+    margin-bottom: 20px;
+}
+
 h1 {
     margin-top: 5px;
     margin-bottom: 30px;
@@ -31,7 +35,7 @@ h4 {
     margin-top: 20px;
     margin-bottom: 10px;
     font-size: 20px;
-    font-weight: 250;
+    font-weight: 200;
     text-transform: inherit;
 }
 
@@ -75,14 +79,24 @@ div.document {
 }
 
 
-
-.footnotes {
+.footnote, .footnotes {
     margin-top: 35px;
     font-size: 0.8em;
 }
-.footnotes ~ .footnotes {
+.footnotes ~ .footnotes, .footnote ~ .footnote {
     margin-top: 5px;  /* dirty hack - we abort margin for non-first footnotes */
 }
+
+table.footnote {
+    width: auto !important;
+    margin: 5px 0 !important;
+}
+
+table.footnote  th, table.footnote  td {
+    border: none !important;
+}
+
+
 
 table.docutils.footnote {
     margin: 0;
