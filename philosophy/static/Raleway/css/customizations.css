@@ -44,6 +44,25 @@ h4 {
     background-color:#3f729b;
 }
 
+.navbar {
+    font-size:18px;
+    font-weight:600;
+}
+
+.navbar.navbar-main ul.nav a {
+    color:#4F4F4F;
+}
+
+.navbar .dropdown-menu {
+    font-size:14px;
+}
+
+.fa.dropdown-arrow {
+    padding-left:2px;
+    color:#4F4E4E;
+    font-weight:bold !important;
+}
+
 .navbar-toggle {
     margin-top: 24px;
 }
