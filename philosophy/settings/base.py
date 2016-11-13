@@ -233,7 +233,7 @@ CKEDITOR_SETTINGS = {
 TAGGIT_CASE_INSENSITIVE = True
 
 
-CMSPLUGIN_RST_SETTINGS_OVERRIDES = {"initial_header_level": 1, # minimum "h2" when rendered to html
+CMSPLUGIN_RST_SETTINGS_OVERRIDES = {"initial_header_level": 2, # minimum "h2" when rendered to html
                                     "smart_quotes": "alt"}
 
 

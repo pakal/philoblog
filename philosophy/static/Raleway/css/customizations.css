@@ -57,6 +57,13 @@ h4 {
     font-size:14px;
 }
 
+.header .site-title {
+    font-size:13px;
+    margin:0;
+    font-weight:700;
+    text-transform:uppercase;
+}
+
 .fa.dropdown-arrow {
     padding-left:2px;
     color:#4F4E4E;

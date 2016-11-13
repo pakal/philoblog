@@ -1700,7 +1700,7 @@ blockquote {
 /* =Header 1 and 2
 -------------------------------------------------------------- */
 .header { padding:12px 0 12px 0; border-bottom:1px dotted #d2d2d2; background:#fafafa; }
-.header .site-title {
+.header h1 {
 	font-size:13px;
 	margin:0;
 	padding-top:4px;
