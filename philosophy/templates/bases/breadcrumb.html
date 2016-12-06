@@ -2,7 +2,7 @@
 <li>
     {% if forloop.first %}<span class="ion-home breadcrumb-home"></span>{% endif %}
 	{% if not forloop.last %}
-	<a href="{{ ance.get_absolute_url }}">{{ ance.get_menu_title }}</a>
+	{{ ance.get_menu_title }} {# NO URLS IN BREADCRUMB, SINCE WE HAVE NO CATEGORY SYSTEM FOR NOW #}
 	{% else %}
 	<span class="active">{{ ance.get_menu_title }}</span>
 	{% endif %}
