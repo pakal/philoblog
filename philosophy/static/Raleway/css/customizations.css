@@ -227,3 +227,7 @@ dd {
     padding: 1px; /* else bugs with borders on chrome... */
     border: 1px solid rgba(15, 70, 100, 0.12)
 }
+
+form input[type=file] {
+    height: auto !important;  // else, breaks the design of file inputs
+}
