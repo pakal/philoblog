@@ -1,0 +1,17 @@
+{% extends "bases/base_cms.html" %}
+{% load cms_tags page_tags i18n thumbnail %}
+
+
+{% block content %}
+{{ block.super }}
+<div class="row">
+{% for title, gallery in galleries %}
+    <h2>{{ title }}</h2>
+    {% for page, image in gallery %}
+        <a href="{{ page.get_absolute_url }}">
+            <img src="{% thumbnail image 150x100 crop %}">
+        </a>
+    {% endfor %}
+{% endfor %}
+</div>
+{% endblock content %}
