@@ -38,10 +38,21 @@ def overview(request):
 
             placeholder = _get_placeholder(page, page, context, name)  # placeholder or None
             #content = get_placeholder_content(context, request, page, name, inherit, nodelist)
+            if not placeholder:
+                continue
+
             plugins = placeholder.get_plugins()
-            image = plugins[0] if plugins else None
+
+            if not plugins:
+                continue
+
+            image = plugins[0]
             inst, klass = image.get_plugin_instance()
-            print(">>>>>>>", type(inst.image), inst.image.file)
+
+            if not hasattr(inst, "image"):
+                continue  # weird, not an image plugin
+
+            #print(">>>>>>>", type(inst.image), inst.image.file)
             images.append((page, inst.image.file))
 
         if images:

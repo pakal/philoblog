@@ -11,6 +11,8 @@ from django.http import HttpResponse
 
 from djangocms_page_sitemap.sitemap import ExtendedSitemap
 
+from .views import overview
+
 admin.autodiscover()
 
 
@@ -36,6 +38,8 @@ urlpatterns = i18n_patterns('',
 
     url(r'^newsletter/', include('newsletter.urls')),
     url(r'^tinymce/', include('tinymce.urls')),
+
+    url(r'^overview/', overview),
 
     url(r'^', include('cms.urls')),
 )
