@@ -1,17 +1,52 @@
 {% extends "bases/base_cms.html" %}
-{% load cms_tags page_tags i18n thumbnail %}
+{% load cms_tags page_tags i18n thumbnail sekizai_tags %}
 
+{% block page_title %}Index{{ block.super }}{% endblock page_title %}
 
 {% block content %}
 {{ block.super }}
-<div class="row">
+
+<h1>Survol des Articles</h1>
+
+<div class="">
+
 {% for title, gallery in galleries %}
+
     <h2>{{ title }}</h2>
+    <div id="unite-gallery-tiles{{ forloop.counter }}" style="margin:0px auto; display:block;">
     {% for page, image in gallery %}
         <a href="{{ page.get_absolute_url }}">
-            <img src="{% thumbnail image 150x100 crop %}">
+            <img alt="{{ page.get_menu_title }}" src="{% thumbnail image 400x250 crop %}" data-image="" data-description="" style="display:none">
         </a>
     {% endfor %}
+    </div>
+
+    <script>
+        $(function(){jQuery("#unite-gallery-tiles{{ forloop.counter }}").unitegallery(
+            {gallery_theme: "tiles",
+
+             tile_as_link: true,
+             tile_enable_textpanel: true,
+             tile_textpanel_always_on: true,
+
+             //tiles_type: "justified",
+             tile_border_color: "#F0F0F0",
+             tile_outline_color: "#8B8B8B",
+             tile_enable_shadow: true,
+             tile_shadow_color: "#8B8B8B",
+             tile_show_link_icon: false,
+
+             theme_gallery_padding: 20,
+             tiles_justified_space_between: 20,
+             tiles_justified_row_height: 200}
+        )});
+    </script>
 {% endfor %}
+
 </div>
+
+{% addtoblock "css" %}{# DISABLE LINK ICON FOR THIS UNITE GALLERY #}
+    <style>.ug-tile-icon.ug-icon-link {display: none !important}</style>
+{% endaddtoblock %}
+
 {% endblock content %}

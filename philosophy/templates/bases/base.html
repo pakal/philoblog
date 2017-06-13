@@ -62,6 +62,9 @@
 
     <!-- Magnific Popup -->
     <link href='{{ STATIC_URL }}Raleway/css/magnific-popup.css' rel='stylesheet' type='text/css'>
+
+    <!-- Unite Gallery -->
+    <link rel='stylesheet' href='{{ STATIC_URL }}unitegallery/css/unite-gallery.css' type='text/css' />
     {% endcompress %}
 
     {% render_block "css" %}
@@ -118,7 +121,11 @@
     <script type="text/javascript" src="{{ STATIC_URL }}Raleway/js/skrollr.min.js"></script>
     <!-- Main Javascript -->
     <script type="text/javascript" src="{{ STATIC_URL }}Raleway/js/main.js"></script>
+    <!-- Unite Gallery -->
+    <script type='text/javascript' src='{{ STATIC_URL }}unitegallery/js/unitegallery.js'></script>
+    <script type='text/javascript' src='{{ STATIC_URL }}unitegallery/themes/tiles/ug-theme-tiles.js'></script>
     {% endcompress %}
+
 
     {%  comment %}
     <!-- On Scroll Animations - scrollReveal.js -->
