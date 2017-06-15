@@ -1,12 +1,6 @@
-{% extends "bases/base_cms.html" %}
-{% load cms_tags page_tags i18n thumbnail sekizai_tags %}
 
-{% block page_title %}Index{{ block.super }}{% endblock page_title %}
+{% load i18n thumbnail sekizai_tags %}
 
-{% block content %}
-{{ block.super }}
-
-<h1>Survol des Articles</h1>
 
 <div class="">
 
@@ -45,8 +39,7 @@
 
 </div>
 
+
 {% addtoblock "css" %}{# DISABLE LINK ICON FOR THIS UNITE GALLERY #}
     <style>.ug-tile-icon.ug-icon-link {display: none !important}</style>
 {% endaddtoblock %}
-
-{% endblock content %}
