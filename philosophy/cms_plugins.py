@@ -29,7 +29,7 @@ def get_preview_galleries(request):
     galleries = []
 
     for section in sections:
-        print("------>", section.title)
+        #print("------>", section.title)
 
         images = []
 
