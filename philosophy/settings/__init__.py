@@ -55,10 +55,11 @@ SESSION_COOKIE_SECURE = False
 GOOGLE_ANALYTICS_PROPERTY_ID = env.str("GOOGLE_ANALYTICS_PROPERTY_ID", default=None)  # eg. 'UA-14845987-3'
 GOOGLE_ANALYTICS_DOMAIN = env.str("GOOGLE_ANALYTICS_DOMAIN", default=None)  # eg. 'mydomain.com' or 'auto'
 
+SERVER_EMAIL = env.str("SERVER_EMAIL", default=None)  # "from" of ERROR emails only
+DEFAULT_FROM_EMAIL = SERVER_EMAIL  # default "from" for non-ERROR emails
+
 _enable_smtp = env.bool("ENABLE_SMTP", default=None)
 if _enable_smtp:
-    SERVER_EMAIL = env.str("SERVER_EMAIL", default=None)  # "from" of ERROR emails only
-    DEFAULT_FROM_EMAIL = SERVER_EMAIL  # default "from" for non-ERROR emails
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'  # restored to default value
     EMAIL_HOST = env.str("EMAIL_HOST")
     EMAIL_PORT = env.int("EMAIL_PORT")
@@ -68,5 +69,7 @@ if _enable_smtp:
     EMAIL_USE_SSL = env.bool("EMAIL_USE_TLS")
 
 
+
 if ENVIRONMENT != "development":
     from webfaction_common_prod_settings import *  # may override SMTP, cache etc.
+    
