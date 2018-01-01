@@ -75,6 +75,7 @@ MIDDLEWARE_CLASSES = [
     ## broken 'cms.middleware.utils.ApphookReloadMiddleware',
     ## SEEMS BUGGY 'django.middleware.cache.UpdateCacheMiddleware',
     'philosophy.middlewares.ReverseProxyFixer',
+    'django.contrib.redirects.middleware.RedirectFallbackMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -102,6 +103,7 @@ INSTALLED_APPS = [
     'django.contrib.sitemaps',
     'django.contrib.staticfiles',
     'django.contrib.messages',
+    'django.contrib.redirects',
 
     'cms',
     'menus',
