@@ -34,8 +34,11 @@ def get_preview_galleries(request):
         images = []
 
         for article in section.children:
-            page = Page.objects.published().get(pk=article.id)
-            #print(page)
+            try:
+                page = Page.objects.published().get(pk=article.id)
+                #print(page)
+            except Page.DoesNotExist:
+                continue  # page not yet published
 
             context = RequestContext(request, {"request": request})
             name = "illustration"
