@@ -18,7 +18,7 @@ admin.autodiscover()
 ROBOTS_TXT = """
 User-agent: *
 
-Sitemap: http://regard-humaniste.com/fr/sitemap.xml
+Sitemap: https://regard-humaniste.com/fr/sitemap.xml
 """
 
 urlpatterns = i18n_patterns('',
