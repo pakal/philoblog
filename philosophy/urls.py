@@ -21,7 +21,22 @@ User-agent: *
 Sitemap: https://regard-humaniste.com/fr/sitemap.xml
 """
 
-urlpatterns = i18n_patterns(
+
+# WORKAROUND for cron jobs generating broken i18n urls - https://code.djangoproject.com/ticket/26271
+urlpatterns = [
+    url('^None/(?P<path>.*)$', RedirectView.as_view(url='/%(path)s', permanent=False)),
+]
+
+
+# This is only needed when using runserver.
+if settings.DEBUG:
+    urlpatterns += [
+        url(r'^media/(?P<path>.*)$', 'django.views.static.serve',  # NOQA
+            {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
+        ] + staticfiles_urlpatterns() # NOQA
+
+
+urlpatterns += i18n_patterns(
 
     url(r'^robots.txt$', lambda r: HttpResponse(ROBOTS_TXT)),
 
@@ -41,14 +56,5 @@ urlpatterns = i18n_patterns(
     url(r'^', include('cms.urls')),
 )
 
-# WORKAROUND for cron jobs generating broken i18n urls - https://code.djangoproject.com/ticket/26271
-urlpatterns += patterns(
-    url('^None/(?P<path>.*)$', RedirectView.as_view(url='/%(path)s', permanent=False)),
-)
 
-# This is only needed when using runserver.
-if settings.DEBUG:
-    urlpatterns = patterns(
-        url(r'^media/(?P<path>.*)$', 'django.views.static.serve',  # NOQA
-            {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
-        ) + staticfiles_urlpatterns() + urlpatterns  # NOQA
+
