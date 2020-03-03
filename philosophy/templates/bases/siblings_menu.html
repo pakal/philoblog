@@ -1,9 +1,10 @@
 {% load menu_tags extra_tags %}
-<div class="blog-heading"><h3>{{ request.current_page.parent }}</h3></div>
+<div class="blog-heading"><h3>{{ request.current_page.parent_page }}</h3></div>
+
+{#% debug_object_dump request.current_page.parent_page %#}
 
 <ul class="nav nav-pills nav-stacked mb30">
-{% for child in request.current_page.parent.children.all %}
-    {#% debug_object_dump child %#}
+{% for child in request.current_page.parent_page.get_child_pages %}
     {% if child.get_public_url and child.in_navigation %}
     <li class="{% if request.current_page == child %}active{% endif %}">
         <a href="{{child.get_public_url}}">{{child.get_menu_title}}</a>
