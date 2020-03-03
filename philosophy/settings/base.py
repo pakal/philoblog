@@ -71,9 +71,9 @@ TEMPLATES = [
 ]
 
 MIDDLEWARE = [
-    ## broken 'cms.middleware.utils.ApphookReloadMiddleware',
-    ## SEEMS BUGGY 'django.middleware.cache.UpdateCacheMiddleware',
-    ### TODO RESTORE "philosophy.middlewares.ReverseProxyFixer",
+    "philosophy.middlewares.ReverseProxyFixer",
+    # 'cms.middleware.utils.ApphookReloadMiddleware' -> enable this to autoreload server when apphooks are modified
+    "django.middleware.cache.UpdateCacheMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -87,7 +87,7 @@ MIDDLEWARE = [
     'cms.middleware.toolbar.ToolbarMiddleware',
     'cms.middleware.language.LanguageCookieMiddleware',
     'request.middleware.RequestMiddleware',  # AFTER auth stuffs
-    ## SEEMS BUGGY 'django.middleware.cache.FetchFromCacheMiddleware',
+    'django.middleware.cache.FetchFromCacheMiddleware',
 ]
 
 INSTALLED_APPS = [
@@ -187,7 +187,29 @@ CMS_TEMPLATES = (
 CMS_PERMISSION = True
 CMS_PUBLIC_FOR = "all"   # or "staff"
 
-CMS_PLACEHOLDER_CONF = {}
+CMS_TEMPLATE_INHERITANCE = True
+CMS_PLACEHOLDER_CONF = {}  # unused atm
+CMS_PLUGIN_CONTEXT_PROCESSORS = []
+CMS_PLUGIN_PROCESSORS = []
+CMS_UNESCAPED_RENDER_MODEL_TAGS = False
+
+CMS_CACHE_DURATIONS = {  # in seconds
+    'menus': 60 * 60,
+    'content': 60,
+    'permissions': 60 * 60,
+}
+
+CMS_CACHE_PREFIX = "philocms-"  # useful if multiple CMS installations
+CMS_PAGE_CACHE = True
+CMS_PLACEHOLDER_CACHE = True
+CMS_PLUGIN_CACHE = True
+
+CMS_MAX_PAGE_HISTORY_REVERSIONS = 15
+CMS_MAX_PAGE_PUBLISH_REVERSIONS = 10
+
+CMS_TOOLBARS = None  # all, by default
+CMS_TOOLBAR_ANONYMOUS_ON = True
+CMS_TOOLBAR_HIDE = False
 
 
 MIGRATION_MODULES = {
@@ -251,3 +273,7 @@ NEWSLETTER_RICHTEXT_WIDGET = "tinymce.widgets.TinyMCE"
 INTERNAL_IPS = [
     '127.0.0.1',
 ]
+
+CACHE_MIDDLEWARE_ALIAS = "default"
+CACHE_MIDDLEWARE_SECONDS = 3600
+CACHE_MIDDLEWARE_KEY_PREFIX = ""  # No multi-site for now

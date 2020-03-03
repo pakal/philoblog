@@ -1,12 +1,7 @@
 from cms.plugin_base import CMSPluginBase
 from cms.plugin_pool import plugin_pool
 from cms.models.pluginmodel import CMSPlugin
-from django.utils.translation import ugettext_lazy as _
-
 from cms.models import Page
-
-from django.shortcuts import render
-from django.template import RequestContext
 from menus.menu_pool import menu_pool
 from menus.templatetags.menu_tags import cut_levels
 
