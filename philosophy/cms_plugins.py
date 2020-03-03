@@ -4,12 +4,11 @@ from cms.models.pluginmodel import CMSPlugin
 from django.utils.translation import ugettext_lazy as _
 
 from cms.models import Page
-from cms.templatetags.cms_tags import get_placeholder_content, _get_placeholder
+
 from django.shortcuts import render
 from django.template import RequestContext
 from menus.menu_pool import menu_pool
 from menus.templatetags.menu_tags import cut_levels
-
 
 
 def get_preview_galleries(request):
@@ -18,10 +17,7 @@ def get_preview_galleries(request):
 
     nodes = menu_renderer.get_nodes()
 
-    #for node in nodes:
-        #print("=========>", node, node.children)
-
-
+    # In case we want to trim displayed articles in this preview
     sections = cut_levels(nodes,
                           from_level=0, to_level=100,
                           extra_inactive=1000, extra_active=1000)
@@ -29,47 +25,30 @@ def get_preview_galleries(request):
     galleries = []
 
     for section in sections:
-        #print("------>", section.title)
 
-        images = []
+        section_images = []
 
         for article in section.children:
             try:
                 page = Page.objects.published().get(pk=article.id)
-                #print(page)
             except Page.DoesNotExist:
-                continue  # page not yet published
+                continue  # Page is not yet published
 
-            context = RequestContext(request, {"request": request})
-            name = "illustration"
-            inherit = False
-            nodelist = None
+            placeholders = page.get_placeholders().filter(slot="illustration")
+            for placeholder in placeholders:
 
-            placeholder = _get_placeholder(page, page, context, name)  # placeholder or None
-            #content = get_placeholder_content(context, request, page, name, inherit, nodelist)
-            if not placeholder:
-                continue
+                for plugin in placeholder.get_plugins():  # Returns CMSPlugin instances
+                    real_plugin = plugin.get_bound_plugin()  # Real subtype of CMSPlugin
 
-            plugins = placeholder.get_plugins()
+                    if not hasattr(real_plugin, "image"):
+                        continue  # Not an image plugin? Skip!
 
-            if not plugins:
-                continue
+                    section_images.append((page, real_plugin.image.file))
 
-            image = plugins[0]
-            inst, klass = image.get_plugin_instance()
+        if section_images:
+            galleries.append((section.title, section_images))
 
-            if not hasattr(inst, "image"):
-                continue  # weird, not an image plugin
-
-            #print(">>>>>>>", type(inst.image), inst.image.file)
-            images.append((page, inst.image.file))
-
-        if images:
-            galleries.append((section.title, images))
-
-    #print(galleries)
     return galleries
-
 
 
 class PagesOverviewPlugin(CMSPluginBase):
@@ -82,7 +61,6 @@ class PagesOverviewPlugin(CMSPluginBase):
         context.update({
             "galleries": get_preview_galleries(request)
         })
-        #print(">>CONTEXT IS", context)
         return context
 
 
