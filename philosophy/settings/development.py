@@ -8,6 +8,10 @@ TEMPLATES[0]['OPTIONS'].update({'debug': True})
 if "celery" in sys.argv[0]:
     DEBUG = False
 
+MIDDLEWARE += [
+    'debug_toolbar.middleware.DebugToolbarMiddleware'
+]
+
 # Django Debug Toolbar
 INSTALLED_APPS += (
     'debug_toolbar.apps.DebugToolbarConfig',

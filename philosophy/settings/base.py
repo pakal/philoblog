@@ -247,3 +247,7 @@ TERMS_ADDITIONAL_IGNORED_TAGS = ()  # lost of other similar settings exist
 
 
 NEWSLETTER_RICHTEXT_WIDGET = "tinymce.widgets.TinyMCE"
+
+INTERNAL_IPS = [
+    '127.0.0.1',
+]
