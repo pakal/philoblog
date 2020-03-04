@@ -9,9 +9,12 @@
     <h2>{{ title }}</h2>
     <div id="unite-gallery-tiles{{ forloop.counter }}" style="margin:0px auto; display:block;">
     {% for page, image in gallery %}
+        {% thumbnail image 400x250 crop as page_illustration %}
+        {% if page_illustration %}
         <a href="{{ page.get_absolute_url }}">
-            <img alt="{{ page.get_menu_title }}" src="{% thumbnail image 400x250 crop %}" data-image="" data-description="" style="display:none">
+            <img alt="{{ page.get_menu_title }}" src="{{ page_illustration.url }}" data-image="" data-description="" style="display:none">
         </a>
+        {% endif %}
     {% endfor %}
     </div>
 
