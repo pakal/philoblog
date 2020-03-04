@@ -8,7 +8,7 @@ PyYAML==5.1
 beautifulsoup4==4.7.1
 python-memcached==1.59
 
-Django==2.1.11  # can't switch to 2.2.1 until PyMysql gets updated to match MySQLdb
+Django==2.2.10  # can't switch to 2.2.1 until PyMysql gets updated to match MySQLdb
 
 django-compat-patcher==0.5
 
