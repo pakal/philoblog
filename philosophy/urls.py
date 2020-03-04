@@ -47,8 +47,6 @@ urlpatterns += i18n_patterns(
     url(r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap',
         {'sitemaps': {'cmspages': ExtendedSitemap}}),
 
-    url(r'^select2/', include('django_select2.urls')),
-
     url(r'^taggit_autosuggest/', include('taggit_autosuggest.urls')),
     url(r'^glossary/', include('terms.urls')),
 

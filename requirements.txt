@@ -25,7 +25,7 @@ django-taggit==1.2.0
 
 djangocms-column==1.9.0
 djangocms-googlemap==1.4.0
-https://github.com/isotoma/djangocms-inherit@b19735ea2a5b4552eb6e619422b0a7d8dd67da06
+git+https://github.com/isotoma/djangocms-inherit@b19735ea2a5b4552eb6e619422b0a7d8dd67da06
 djangocms-link==2.4.0
 djangocms-style==2.3.0
 djangocms-snippet==2.3.0
