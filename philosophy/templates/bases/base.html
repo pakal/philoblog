@@ -53,8 +53,16 @@
     <link rel="alternate stylesheet" type="text/css" href="{{ STATIC_URL }}Raleway/css/width-full.css" title="width-full">
     <link rel="stylesheet" href="{{ STATIC_URL }}Raleway/css/colors/pinkish.css" title="pinkish">
     <link rel="alternate stylesheet" type="text/css" href="{{ STATIC_URL }}Raleway/css/width-boxed.css" title="width-boxed"-->
-
     <!--link rel="stylesheet" href="{{ STATIC_URL }}Raleway/css/colors/dark-blue.css"-->
+
+    {% if request.site.id == 2 %}
+        {# Customization for Splendor Mysterii book on religion #}
+        <link href="{{ STATIC_URL }}Raleway/css/colors/red.css" rel="stylesheet">
+        <style id="extra_link_style">
+            {# Force red colors with misc. widgets #}
+            a, a:hover { color:#FF3B30; }
+        </style>
+    {% endif %}
 
     <!-- Icon Fonts -->
     <link href='{{ STATIC_URL }}Raleway/css/ionicons.min.css' rel='stylesheet' type='text/css'>
