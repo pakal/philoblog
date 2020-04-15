@@ -155,7 +155,7 @@ LANGUAGES = (
 
 CMS_LANGUAGES = {
     ## Customize this
-    1: [
+    1 : [
         {
             'redirect_on_fallback': True,
             'code': 'fr',
@@ -177,12 +177,15 @@ CMS_LANGUAGES = {
         'hide_untranslated': False,
     },
 }
+CMS_LANGUAGES[2] = CMS_LANGUAGES[1]  # SAME CONF FOR BOTH SITE IDS
 
 CMS_TEMPLATES = (
     ## Customize this
     ('single_article.html', 'Single Article'),
+    ('single_article_notwitter.html', 'Single Article No Twitter'),
     ('page.html', 'Page'),
     ('homepage.html', 'Homepage'),
+    ('homepage_notwitter.html', 'Homepage No Twitetr'),
 )
 
 CMS_PERMISSION = True
