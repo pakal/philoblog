@@ -42,6 +42,9 @@
                 {% endcomment %}
             </div><!-- /image hover -->
             <div class="blog-post-holder">
+
+                {% static_placeholder 'before-article' %}
+
                 <ul class="list-inline posted-info">
                     {% page_attribute "changed_date" as changed_date %}
                     <li>{% trans "Last edited:" %} {{ changed_date|date:"SHORT_DATE_FORMAT" }}</li>
@@ -51,6 +54,9 @@
                 <h1>{% page_attribute "title" %}</h1>
 
                 {% placeholder "content" %}
+
+                {% static_placeholder 'after-article' %}
+
                 {# <a class="btn btn-rw btn-primary mt10" href="#">Read more</a> #}
                 <div class="disqus-comments mt40">
                     {% static_placeholder 'disqus-comments' %}
