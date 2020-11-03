@@ -185,7 +185,7 @@ CMS_TEMPLATES = (
     ('single_article_notwitter.html', 'Single Article No Twitter'),
     ('page.html', 'Page'),
     ('homepage.html', 'Homepage'),
-    ('homepage_notwitter.html', 'Homepage No Twitetr'),
+    ('homepage_notwitter.html', 'Homepage No Twitter'),
 )
 
 CMS_PERMISSION = True
