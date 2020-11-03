@@ -9,6 +9,8 @@ ___*
 CACHE/
 .cache
 
+local.env
+
 .idea
 .settings
 
