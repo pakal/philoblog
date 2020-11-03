@@ -9,7 +9,7 @@ compat-patcher-core==1.0
 decorator==4.4.0
 disqus-python==0.4.2
 dj-database-url==0.4.1
-Django==2.1.11
+Django==2.2.13
 django-appconf==1.0.3
 django-classy-tags==1.0.0
 django-cms==3.6.0
