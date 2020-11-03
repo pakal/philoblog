@@ -25,6 +25,8 @@ COMPRESS_ROOT = STATIC_ROOT  # for now, must be writable so
 MEDIA_ROOT = env.str('MEDIA_ROOT')
 MEDIA_ROOT = os.path.join(ROOT_DIR, MEDIA_ROOT) if not os.path.isabs(MEDIA_ROOT) else MEDIA_ROOT
 
+STATIC_URL = env.str('STATIC_URL', default='/static/')
+MEDIA_URL = env.str('MEDIA_URL',  default='/media/')
 
 # for alert emails
 ADMINS = env.json("ADMINS", default=None)
@@ -71,5 +73,4 @@ if _enable_smtp:
 
 
 if ENVIRONMENT != "development":
-    from webfaction_common_prod_settings import *  # may override SMTP, cache etc.
-    
+    from o2switch_common_prod_settings import *  # may override SMTP, cache etc.
