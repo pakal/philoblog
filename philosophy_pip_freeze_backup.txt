@@ -69,7 +69,7 @@ python-card-me==0.9.3
 python-dateutil==2.5.3
 python-memcached==1.59
 pytz==2016.4
-PyYAML==5.1
+PyYAML==5.4
 rcssmin==1.0.6
 requests==2.10.0
 requests-file==1.4.3
