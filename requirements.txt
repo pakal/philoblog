@@ -4,7 +4,7 @@ html5lib==0.999999999  # last version with "html5lib.sanitizer" required (or not
 Pillow>=2.7.0
 six
 decorator==4.4.0
-PyYAML==5.1
+PyYAML==5.4
 beautifulsoup4==4.7.1
 python-memcached==1.59
 
