@@ -50,4 +50,4 @@ django-sekizai==1.1.0
 PyMySQL==0.9.3
 
 # for development
-django-debug-toolbar==1.11
+django-debug-toolbar==1.11.1
