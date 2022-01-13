@@ -12,7 +12,7 @@ dj-database-url==0.4.1
 Django==2.1.11
 django-appconf==1.0.3
 django-classy-tags==1.0.0
-django-cms==3.6.0
+django-cms==3.6.1
 django-compat-patcher==0.8
 django-compressor==2.4
 django-connected==0.1.5
