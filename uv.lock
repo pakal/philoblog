@@ -136,7 +136,7 @@ sdist = { url = "https://files.pythonhosted.org/packages/19/22/39385390e854356a1
 
 [[package]]
 name = "django-cms"
-version = "3.10.1"
+version = "3.11.11"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "django" },
@@ -145,9 +145,11 @@ dependencies = [
     { name = "django-sekizai" },
     { name = "django-treebeard" },
     { name = "djangocms-admin-style" },
+    { name = "packaging" },
 ]
+sdist = { url = "https://files.pythonhosted.org/packages/5a/6b/0204ddd63d5af9a455feeee79364c969c906b2dadee3df53dcb8480494f9/django_cms-3.11.11.tar.gz", hash = "sha256:5d3cf3b64c244f0f7fa8f9310be82bb0465653113ba8d4d7d896ecad1dc44425", size = 4634609, upload-time = "2026-05-05T12:57:54.68Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/80/29/77fff1c127eff9ea36bffe0b795bf0a5e7bf324855b6870af6a92d255682/django_cms-3.10.1-py2.py3-none-any.whl", hash = "sha256:e798d2a934a490f12cf1e98edd2f72930ea29217ea3dc4507d10331de233e216", size = 2091802, upload-time = "2022-06-27T23:39:05.442Z" },
+    { url = "https://files.pythonhosted.org/packages/e6/5c/c542278a7559587218dd35cac6575ff4abe28a8689e820c8fc2601818543/django_cms-3.11.11-py2.py3-none-any.whl", hash = "sha256:52dbf91c040c077a07c297ee9e3fc05ec440f7430538f880897f53132dfaa3d9", size = 2123259, upload-time = "2026-05-05T12:57:52.305Z" },
 ]
 
 [[package]]
@@ -523,6 +525,15 @@ wheels = [
 ]
 
 [[package]]
+name = "packaging"
+version = "24.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/ee/b5/b43a27ac7472e1818c4bafd44430e69605baefe1f34440593e0332ec8b4d/packaging-24.0.tar.gz", hash = "sha256:eb82c5e3e56209074766e6885bb04b8c38a0c015d0a30036ebe7ece34c9989e9", size = 147882, upload-time = "2024-03-10T09:39:28.33Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/49/df/1fceb2f8900f8639e278b056416d49134fb8d84c5942ffaa01ad34782422/packaging-24.0-py3-none-any.whl", hash = "sha256:2ddfb553fdf02fb784c234c7ba6ccc288296ceabec964ad2eae3777778130bc5", size = 53488, upload-time = "2024-03-10T09:39:25.947Z" },
+]
+
+[[package]]
 name = "philosophy"
 version = "0.1.0"
 source = { virtual = "." }
@@ -583,7 +594,7 @@ requires-dist = [
     { name = "decorator", specifier = "==4.4.0" },
     { name = "django", specifier = "==3.2.25" },
     { name = "django-classy-tags", specifier = "==1.0.0" },
-    { name = "django-cms", specifier = "==3.10.1" },
+    { name = "django-cms", specifier = "==3.11.11" },
     { name = "django-compat-patcher", specifier = "==0.14" },
     { name = "django-compressor", specifier = "==2.4" },
     { name = "django-environ", specifier = "==0.4.5" },
