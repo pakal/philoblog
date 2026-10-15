@@ -117,7 +117,6 @@ INSTALLED_APPS = [
     'cmsplugin_filer_video',
     'djangocms_snippet',
     'djangocms_googlemap',
-    'djangocms_inherit',
     'djangocms_link',
     'cmsplugin_rst',
     'cmsplugin_raw_html',

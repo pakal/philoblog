@@ -20,3 +20,6 @@ local.env
 *.sqlite3
 *.log
 *~
+
+/db_dumps/
+.venv*/
