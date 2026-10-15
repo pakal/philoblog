@@ -6,3 +6,71 @@ DEV NOTES
 - django-terms doesn't support regexes in the list of term variants, alas ; so we must recognize use typography characters which might appear on final html, like curly quotes
 
 - django-newsletter cron tasks have problem with generating URLs, since they have no active language ; a fallback urlpattern has been added for now, until we update django
+
+
+pip install rcssmin --install-option="--without-c-extensions"
+pip install rjsmin --install-option="--without-c-extensions"
+
+
+TODO:
+- restore USE_TZ=True
+- TODO purger requests sur o2switch ; too HEAVY.txt
+- Todo réparer tweet X feed on sidebar.txt
+
+
+AJOUTER SIGNATURE LE TIKAMI AUTO SOUS CHAQUE ARTICLE - DONE?
+
+
+
+
+CUSTOM TWITTER COLORS
+=============================
+
+
+        $(function(){
+            console.log("STARIIIING");
+            $("#twitter-widget-0").contents().find("head")[0].appendChild($('#extra_link_style')[0])
+        });
+        
+
+https://www.tweetjs.com/
+
+    <script>
+
+        // TweetJS.com - Display your tweets on your website using Javascript alone
+        // Copyright 2019 Infinite Loop Development Ltd - InfiniteLoop.ie
+        // Do not remove this notice.
+
+        TweetJs = {
+            ListTweetsOnUserTimeline : function(screenName, callback) {
+                TweetJs._callApi({
+                        Action: "ListTweetsOnUserTimeline",
+                        ScreenName: screenName
+                    },
+                callback);
+            },
+            Search: function (query, callback) {
+                TweetJs._callApi({
+                    Action: "Search",
+                    Query: query
+                }, callback);
+            },
+            _callApi: function (request, callback) {
+                var xhr = new XMLHttpRequest();
+                URL = "https://www.tweetjs.com/API.aspx";
+                xhr.open("POST", URL);
+                xhr.onreadystatechange = function () {
+                    if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+                        callback(JSON.parse(xhr.response));
+                    }
+                }
+                xhr.send(JSON.stringify(request));
+            }
+        };
+
+        TweetJs.ListTweetsOnUserTimeline("LeTikami",
+        function (data) {
+            console.log(data);
+        });
+
+    </script>
