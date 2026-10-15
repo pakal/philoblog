@@ -1,3 +1,4 @@
+import copy
 import os
 
 gettext = lambda s: s
@@ -105,6 +106,9 @@ INSTALLED_APPS = [
     'menus',
     'sekizai',
     'treebeard',
+    'parler',
+    'djangocms_versioning',
+    'djangocms_alias',
     'djangocms_text_ckeditor',
     'filer',
     'easy_thumbnails',
@@ -117,9 +121,6 @@ INSTALLED_APPS = [
 
     'djangocms_page_sitemap',
 
-    'taggit',
-    'taggit_autosuggest',
-    'djangocms_page_tags',
     'terms',
 
     # BREAKS django-terms, so don't use it
@@ -167,7 +168,7 @@ CMS_LANGUAGES = {
         'hide_untranslated': False,
     },
 }
-CMS_LANGUAGES[2] = CMS_LANGUAGES[1]  # SAME CONF FOR BOTH SITE IDS
+CMS_LANGUAGES[2] = copy.deepcopy(CMS_LANGUAGES[1])  # SAME CONF FOR BOTH SITE IDS (a copy, since django-parler mutates it)
 
 CMS_TEMPLATES = (
     ## Customize this
@@ -198,8 +199,7 @@ CMS_PAGE_CACHE = True
 CMS_PLACEHOLDER_CACHE = True
 CMS_PLUGIN_CACHE = True
 
-CMS_MAX_PAGE_HISTORY_REVERSIONS = 15
-CMS_MAX_PAGE_PUBLISH_REVERSIONS = 10
+CMS_CONFIRM_VERSION4 = True  # the database was migrated from django-cms 3, see upgrade_scripts/data_fix_03*
 
 CMS_TOOLBARS = None  # all, by default
 CMS_TOOLBAR_ANONYMOUS_ON = True

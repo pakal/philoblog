@@ -1,7 +1,8 @@
 from cms.plugin_base import CMSPluginBase
 from cms.plugin_pool import plugin_pool
 from cms.models.pluginmodel import CMSPlugin
-from cms.models import Page
+from cms.models import PageContent, Placeholder
+from django.utils.translation import get_language
 from menus.menu_pool import menu_pool
 from menus.templatetags.menu_tags import cut_levels
 
@@ -24,12 +25,13 @@ def get_preview_galleries(request):
         section_images = []
 
         for article in section.children:
-            try:
-                page = Page.objects.published().get(pk=article.id)
-            except Page.DoesNotExist:
+            # The default manager only returns published content (djangocms-versioning)
+            page_content = PageContent.objects.filter(page_id=article.id, language=get_language()).first()
+            if not page_content:
                 continue  # Page is not yet published
+            page = page_content.page
 
-            placeholders = page.get_placeholders().filter(slot="illustration")
+            placeholders = Placeholder.objects.get_for_obj(page_content).filter(slot="illustration")
             for placeholder in placeholders:
 
                 for plugin in placeholder.get_plugins():  # Returns CMSPlugin instances
