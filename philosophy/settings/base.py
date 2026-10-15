@@ -220,6 +220,12 @@ THUMBNAIL_PROCESSORS = (
 
 COMPRESS_ENABLED = True
 
+STORAGES = {
+    "default": {"BACKEND": "django.core.files.storage.FileSystemStorage"},
+    "staticfiles": {"BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage"},
+    "compressor": {"BACKEND": "compressor.storage.CompressorFileStorage"},
+}
+
 COMPRESS_PRECOMPILERS = (
     # unused('text/x-scss', 'django_libsass.SassCompiler'),
 )
@@ -263,6 +269,8 @@ TERMS_ADDITIONAL_IGNORED_TAGS = ()  # lost of other similar settings exist
 
 
 NEWSLETTER_RICHTEXT_WIDGET = "tinymce.widgets.TinyMCE"
+NEWSLETTER_THUMBNAIL = "sorl-thumbnail"
+NEWSLETTER_USE_HTTPS = True  # for links in sent emails
 
 INTERNAL_IPS = [
     '127.0.0.1',
