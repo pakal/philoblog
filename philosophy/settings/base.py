@@ -209,6 +209,8 @@ DCP_EXCLUDE_FIXER_IDS = _DCP_DEFAULT_EXCLUDES + [
 ]
 
 MIGRATION_MODULES = {
+    # djangocms-page-sitemap 1.4.0 dropped a model field without shipping the migration for it
+    'djangocms_page_sitemap': 'philosophy.migrations_overrides.djangocms_page_sitemap',
 }
 
 THUMBNAIL_PROCESSORS = (
