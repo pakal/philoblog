@@ -1,5 +1,5 @@
 {% extends "bases/base_cms.html" %}
-{% load cms_tags i18n %}
+{% load cms_tags i18n djangocms_alias_tags %}
 
 {% block content %}
 {{ block.super }}
@@ -16,7 +16,7 @@
         {#% UNUSED ATM - include_title_tags request.current_page %#}
 
         <div class="twitter-feeds mt40 mb40">
-            {% static_placeholder 'twitter-feeds' %}
+            {% static_alias 'twitter-feeds' %}
         </div>
     </div>
 
@@ -43,7 +43,7 @@
             </div><!-- /image hover -->
             <div class="blog-post-holder">
 
-                {% static_placeholder 'before-article' %}
+                {% static_alias 'before-article' %}
 
                 <ul class="list-inline posted-info">
                     {% page_attribute "changed_date" as changed_date %}
@@ -55,11 +55,11 @@
 
                 {% placeholder "content" %}
 
-                {% static_placeholder 'after-article' %}
+                {% static_alias 'after-article' %}
 
                 {# <a class="btn btn-rw btn-primary mt10" href="#">Read more</a> #}
                 <div class="disqus-comments mt40">
-                    {% static_placeholder 'disqus-comments' %}
+                    {% static_alias 'disqus-comments' %}
                 </div>
             </div>
         </div>

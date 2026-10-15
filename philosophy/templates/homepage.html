@@ -1,5 +1,5 @@
 {% extends "bases/base_cms.html" %}
-{% load cms_tags i18n %}
+{% load cms_tags i18n djangocms_alias_tags %}
 
 
 {% block content %}
@@ -10,7 +10,7 @@
         <div class="col-sm-3">
 
             <div class="twitter-feeds mb40">
-                {% static_placeholder 'twitter-feeds' %}
+                {% static_alias 'twitter-feeds' %}
             </div>
 
         </div>

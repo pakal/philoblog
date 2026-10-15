@@ -1,5 +1,5 @@
 {% extends "bases/base.html" %}
-{% load cms_tags %}
+{% load cms_tags djangocms_alias_tags %}
 
 {% block page_title %}{% page_attribute "page_title" %} - {{ block.super }}{% endblock page_title %}
 
@@ -10,7 +10,7 @@
 {% block content %}
 {{ block.super }}
 <div style="display: none !important">
-{% static_placeholder 'hidden_content' %}
+{% static_alias 'hidden_content' %}
 </div>
 
 {% endblock content %}
