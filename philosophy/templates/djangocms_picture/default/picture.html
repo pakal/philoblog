@@ -1,0 +1,11 @@
+{% load l10n %}{% spaceless %}
+{# Same markup as the former cmsplugin-filer image plugin, which the site CSS relies on (img.filer_image, left/right/center, img-responsive, hidden .filer_image_info) #}
+{% with caption=instance.caption_text|default:instance.picture.default_caption %}
+{% if picture_link %}<a href="{{ picture_link }}"{% if instance.link_target %} target="{{ instance.link_target }}"{% endif %} class="filer_image_link" {{ instance.link_attributes_str }}>{% endif %}
+{% localize off %}
+<img class="filer_image{% if instance.alignment %} {{ instance.alignment }}{% endif %}{% if instance.use_automatic_scaling %} img-responsive{% endif %}" alt="{% firstof instance.attributes.alt instance.picture.default_alt_text instance.picture.label %}" src="{{ instance.img_src }}"{% if instance.width %} width="{{ instance.width }}"{% endif %}{% if instance.height %} height="{{ instance.height }}"{% endif %}{% if caption %} title="{{ caption }}"{% endif %} />
+{% endlocalize %}
+{% if caption %}<span class="filer_image_info"><span class="title">{{ caption }}</span></span>{% endif %}
+{% if picture_link %}</a>{% endif %}
+{% endwith %}
+{% endspaceless %}

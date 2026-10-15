@@ -1,0 +1,8 @@
+{# Same markup as the former cmsplugin-filer file plugin #}
+{% if instance.file_src.url %}
+<span class="file">
+<a href="{{ instance.file_src.url }}"{% if instance.link_target %} target="{{ instance.link_target }}"{% endif %} {{ instance.attributes_str }}>
+{% if instance.file_src.icons.32 %}<img src="{{ instance.file_src.icons.32 }}" style="border: 0px" alt="Icon" />{% endif %}
+{% if instance.file_name %}{{ instance.file_name }}{% else %}{{ instance.file_src.label }}{% endif %} {% if instance.show_file_size %}<span class="filesize">({{ instance.file_src.size|filesizeformat }})</span>{% endif %}</a>
+</span>
+{% endif %}

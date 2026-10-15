@@ -35,10 +35,11 @@ def get_preview_galleries(request):
                 for plugin in placeholder.get_plugins():  # Returns CMSPlugin instances
                     real_plugin = plugin.get_bound_plugin()  # Real subtype of CMSPlugin
 
-                    if not hasattr(real_plugin, "image"):
+                    picture = getattr(real_plugin, "picture", None)  # djangocms-picture plugin
+                    if not picture:
                         continue  # Not an image plugin? Skip!
 
-                    section_images.append((page, real_plugin.image.file))
+                    section_images.append((page, picture.file))
 
         if section_images:
             galleries.append((section.title, section_images))

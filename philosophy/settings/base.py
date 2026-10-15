@@ -108,9 +108,8 @@ INSTALLED_APPS = [
     'djangocms_text_ckeditor',
     'filer',
     'easy_thumbnails',
-    'cmsplugin_filer_image',
-    'cmsplugin_filer_file',
-    'cmsplugin_filer_utils',
+    'djangocms_picture',
+    'djangocms_file',
     'djangocms_snippet',
     'djangocms_link',
     'cmsplugin_rst',
@@ -274,9 +273,3 @@ CACHE_MIDDLEWARE_SECONDS = 3600
 CACHE_MIDDLEWARE_KEY_PREFIX = ""  # No multi-site for now
 
 TEXT_AUTO_HYPHENATE = False  # Breaks copy/paste to otehr software!
-
-SILENCED_SYSTEM_CHECKS = [
-    # django-filer 1.5.0's ClipboardAdmin uses filter_horizontal on a M2M with a "through" model;
-    # hard error since Django 5.0, but this admin is never used directly. Drop once filer is bumped.
-    "admin.E013",
-]
