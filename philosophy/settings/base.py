@@ -24,9 +24,9 @@ TIME_ZONE = 'Europe/Paris'
 
 USE_I18N = True
 
-# TODO FIXME
-# BUGFIX FOR "Database returned an invalid datetime value. Are time zone definitions for your database installed?" on O2SWITCH
-USE_TZ = False
+# Datetimes stored in UTC (see upgrade_scripts/data_fix_07_convert_datetimes_to_utc.py); SQL date truncations need the
+# MariaDB time zone tables, else "Database returned an invalid datetime value. Are time zone definitions installed?"
+USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
