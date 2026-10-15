@@ -4,7 +4,7 @@ requires-python = "==3.7.*"
 
 [manifest]
 overrides = [
-    { name = "django", specifier = "==2.1.11" },
+    { name = "django", specifier = "==2.2.28" },
     { name = "rcssmin", specifier = "==1.1.1" },
     { name = "rjsmin", specifier = "==1.2.1" },
 ]
@@ -87,14 +87,15 @@ wheels = [
 
 [[package]]
 name = "django"
-version = "2.1.11"
+version = "2.2.28"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "pytz" },
+    { name = "sqlparse" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/e0/e9/7e6008abee3eb2a40704c95a5cfc8a9627012df1580289d3df0f34c99766/Django-2.1.11.tar.gz", hash = "sha256:1a41831eace203fd1939edf899e07d7abd12ce9bafc3d9a5a63a24a8d1d12bd5", size = 8612487, upload-time = "2019-08-01T09:04:51.69Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/17/27/24d66baeb05a53e38637a4b793df069f2bebacf75bc6e854ff32068a7ef3/Django-2.2.28.tar.gz", hash = "sha256:0200b657afbf1bc08003845ddda053c7641b9b24951e52acd51f6abda33a7413", size = 9187543, upload-time = "2022-04-11T07:53:05.463Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/8c/49/d5038239995594281478bf209f8d93524ad342d500009a697b27f884668a/Django-2.1.11-py3-none-any.whl", hash = "sha256:305b6c4fce9e03bb746e35780c2c4d52f29ea1669f15633cfd41bc8821c74c76", size = 7281462, upload-time = "2019-08-01T09:04:30.982Z" },
+    { url = "https://files.pythonhosted.org/packages/43/69/eaac9a827335898d626066989865974fa48bfc23efd1b34628d64543b2d9/Django-2.2.28-py3-none-any.whl", hash = "sha256:365429d07c1336eb42ba15aa79f45e1c13a0b04d5c21569e7d596696418a6a45", size = 7468548, upload-time = "2022-04-11T07:52:52.782Z" },
 ]
 
 [[package]]
@@ -568,7 +569,7 @@ requires-dist = [
     { name = "cmsplugin-raw-html", git = "https://github.com/makukha/cmsplugin-raw-html" },
     { name = "cmsplugin-rst", git = "https://github.com/pakal/cmsplugin-rst" },
     { name = "decorator", specifier = "==4.4.0" },
-    { name = "django", specifier = "==2.1.11" },
+    { name = "django", specifier = "==2.2.28" },
     { name = "django-classy-tags", specifier = "==1.0.0" },
     { name = "django-cms", specifier = "==3.7.4" },
     { name = "django-compat-patcher", specifier = "==0.8" },
@@ -597,7 +598,7 @@ requires-dist = [
     { name = "html5lib", specifier = "==0.999999999" },
     { name = "logging-tree" },
     { name = "pillow", specifier = ">=2.7.0" },
-    { name = "pymysql", specifier = "==0.9.3" },
+    { name = "pymysql", specifier = "==1.0.2" },
     { name = "python-memcached", specifier = "==1.59" },
     { name = "pytz" },
     { name = "pyyaml", specifier = "==5.1" },
@@ -626,11 +627,11 @@ wheels = [
 
 [[package]]
 name = "pymysql"
-version = "0.9.3"
+version = "1.0.2"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/da/15/23ba6592920e21cb40eb0fe0ea002d2b6177beb1ca8a4c1add5a8f32754d/PyMySQL-0.9.3.tar.gz", hash = "sha256:d8c059dcd81dedb85a9f034d5e22dcb4442c0b201908bede99e306d65ea7c8e7", size = 75293, upload-time = "2018-12-18T11:40:40.658Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/60/ea/33b8430115d9b617b713959b21dfd5db1df77425e38efea08d121e83b712/PyMySQL-1.0.2.tar.gz", hash = "sha256:816927a350f38d56072aeca5dfb10221fe1dc653745853d30a216637f5d7ad36", size = 45478, upload-time = "2021-01-09T11:33:41.482Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/ed/39/15045ae46f2a123019aa968dfcba0396c161c20f855f11dea6796bcaae95/PyMySQL-0.9.3-py2.py3-none-any.whl", hash = "sha256:3943fbbbc1e902f41daf7f9165519f140c4451c179380677e6a848587042561a", size = 47738, upload-time = "2018-12-18T11:41:04.448Z" },
+    { url = "https://files.pythonhosted.org/packages/4f/52/a115fe175028b058df353c5a3d5290b71514a83f67078a6482cff24d6137/PyMySQL-1.0.2-py3-none-any.whl", hash = "sha256:41fc3a0c5013d5f039639442321185532e3e2c8924687abe6537de157d403641", size = 43828, upload-time = "2021-01-09T11:33:39.78Z" },
 ]
 
 [[package]]
