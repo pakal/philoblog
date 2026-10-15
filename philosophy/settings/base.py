@@ -14,8 +14,6 @@ ROOT_URLCONF = 'philosophy.urls'
 
 WSGI_APPLICATION = 'philosophy.wsgi.application'
 
-
-
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
@@ -27,7 +25,9 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+# TODO FIXME
+# BUGFIX FOR "Database returned an invalid datetime value. Are time zone definitions for your database installed?" on O2SWITCH
+USE_TZ = False
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
@@ -130,7 +130,7 @@ INSTALLED_APPS = [
     'terms',
 
     # BREAKS django-terms, so don't use it
-    # and don't even install it: 'softhyphen',
+    # and don't even install it: 'softhyphen'
 
     'reversion',
     'compressor',
@@ -278,3 +278,5 @@ INTERNAL_IPS = [
 CACHE_MIDDLEWARE_ALIAS = "default"
 CACHE_MIDDLEWARE_SECONDS = 3600
 CACHE_MIDDLEWARE_KEY_PREFIX = ""  # No multi-site for now
+
+TEXT_AUTO_HYPHENATE = False  # Breaks copy/paste to otehr software!
