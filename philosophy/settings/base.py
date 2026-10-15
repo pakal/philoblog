@@ -41,6 +41,9 @@ STATICFILES_DIRS = (
 )
 SITE_ID = 1
 
+# Keep historical int primary keys (no schema change), silences models.W042 since Django 3.2
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
