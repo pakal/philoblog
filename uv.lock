@@ -4,7 +4,7 @@ requires-python = "==3.10.*"
 
 [manifest]
 overrides = [
-    { name = "django", specifier = "==4.1.13" },
+    { name = "django", specifier = "==4.2.30" },
     { name = "django-polymorphic", specifier = "==3.0.0" },
     { name = "rcssmin", specifier = "==1.1.1" },
     { name = "rjsmin", specifier = "==1.2.1" },
@@ -100,16 +100,16 @@ wheels = [
 
 [[package]]
 name = "django"
-version = "4.1.13"
+version = "4.2.30"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "asgiref" },
     { name = "sqlparse" },
     { name = "tzdata", marker = "sys_platform == 'win32'" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/34/09/300498ca0a5f37e0621b90a94c71fc8a4227be5488a3bd5550869c6e0049/Django-4.1.13.tar.gz", hash = "sha256:94a3f471e833c8f124ee7a2de11e92f633991d975e3fa5bdd91e8abd66426318", size = 10515104, upload-time = "2023-11-01T06:59:24.955Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/11/b5/f1a53dc68da6429d6e0345bb848161e2381a2e9f02700148911e8582c2b3/django-4.2.30.tar.gz", hash = "sha256:4ebc7a434e3819db6cf4b399fb5b3f536310a30e8486f08b66886840be84b37c", size = 10468707, upload-time = "2026-04-07T14:05:45.57Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/ad/ac/203ce7fd2e03fb0392e0a6160f4b27d0d1efe1614cb65f1d29e6bbf2ef69/Django-4.1.13-py3-none-any.whl", hash = "sha256:04ab3f6f46d084a0bba5a2c9a93a3a2eb3fe81589512367a75f79ee8acf790ce", size = 8104299, upload-time = "2023-11-01T06:59:10.387Z" },
+    { url = "https://files.pythonhosted.org/packages/39/b7/a7c96f239cf91313a6589233fed55111c7063b26683b226802732c455dbc/django-4.2.30-py3-none-any.whl", hash = "sha256:4d07aaf1c62f9984842b67c2874ebbf7056a17be253860299b93ae1881faad65", size = 7997231, upload-time = "2026-04-07T14:05:38.241Z" },
 ]
 
 [[package]]
@@ -598,7 +598,7 @@ requires-dist = [
     { name = "cmsplugin-raw-html", git = "https://github.com/makukha/cmsplugin-raw-html" },
     { name = "cmsplugin-rst", git = "https://github.com/pakal/cmsplugin-rst" },
     { name = "decorator", specifier = "==4.4.0" },
-    { name = "django", specifier = "==4.1.13" },
+    { name = "django", specifier = "==4.2.30" },
     { name = "django-classy-tags", specifier = "==1.0.0" },
     { name = "django-cms", specifier = "==3.11.11" },
     { name = "django-compat-patcher", specifier = "==0.14" },
@@ -627,7 +627,7 @@ requires-dist = [
     { name = "html5lib", specifier = "==1.1" },
     { name = "logging-tree" },
     { name = "pillow", specifier = ">=2.7.0" },
-    { name = "pymysql", specifier = "==1.0.2" },
+    { name = "pymysql", specifier = "==1.2.3" },
     { name = "python-memcached", specifier = "==1.59" },
     { name = "pytz" },
     { name = "pyyaml", specifier = "==5.1" },
@@ -659,11 +659,11 @@ wheels = [
 
 [[package]]
 name = "pymysql"
-version = "1.0.2"
+version = "1.2.3"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/60/ea/33b8430115d9b617b713959b21dfd5db1df77425e38efea08d121e83b712/PyMySQL-1.0.2.tar.gz", hash = "sha256:816927a350f38d56072aeca5dfb10221fe1dc653745853d30a216637f5d7ad36", size = 45478, upload-time = "2021-01-09T11:33:41.482Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/b1/d4/c15b459e25a23767d2f4065ef40968920320f04e302889574310c21c96a3/pymysql-1.2.3.tar.gz", hash = "sha256:d5b288529782e536ae171866df3ca9dc4f6cbfb3cc2f18e6f837fbb90dbc262b", size = 50629, upload-time = "2026-09-17T12:22:49.146Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/4f/52/a115fe175028b058df353c5a3d5290b71514a83f67078a6482cff24d6137/PyMySQL-1.0.2-py3-none-any.whl", hash = "sha256:41fc3a0c5013d5f039639442321185532e3e2c8924687abe6537de157d403641", size = 43828, upload-time = "2021-01-09T11:33:39.78Z" },
+    { url = "https://files.pythonhosted.org/packages/a9/4b/0a906d8184f011ff8dbd4722743783867589b33269d2c5fff238d636fdcb/pymysql-1.2.3-py3-none-any.whl", hash = "sha256:14f1c68e2ed859243ae5ca41ffbe677027fc46bc136a9f0be8a4e928e5e7415a", size = 46740, upload-time = "2026-09-17T12:22:47.826Z" },
 ]
 
 [[package]]
