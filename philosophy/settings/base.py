@@ -170,10 +170,8 @@ CMS_LANGUAGES[2] = copy.deepcopy(CMS_LANGUAGES[1])  # SAME CONF FOR BOTH SITE ID
 CMS_TEMPLATES = (
     ## Customize this
     ('single_article.html', 'Single Article'),
-    ('single_article_notwitter.html', 'Single Article No Twitter'),
     ('page.html', 'Page'),
     ('homepage.html', 'Homepage'),
-    ('homepage_notwitter.html', 'Homepage No Twitter'),
 )
 
 CMS_PERMISSION = True

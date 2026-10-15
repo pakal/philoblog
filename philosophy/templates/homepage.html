@@ -1,22 +1,12 @@
 {% extends "bases/base_cms.html" %}
-{% load cms_tags i18n djangocms_alias_tags %}
+{% load cms_tags i18n %}
 
 
 {% block content %}
     {{ block.super }}
     <div class="row">
 
-        <!-- Sidebar -->
-        <div class="col-sm-3">
-
-            <div class="twitter-feeds mb40">
-                {% static_alias 'twitter-feeds' %}
-            </div>
-
-        </div>
-
-        <!-- Intro Content -->
-        <div class="col-sm-9">
+        <div class="col-sm-12">
             <div class="blog-post mb40">
                 <div>
                     {% placeholder "content" %}

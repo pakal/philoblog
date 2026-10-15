@@ -12,10 +12,6 @@ pip install rcssmin --install-option="--without-c-extensions"
 pip install rjsmin --install-option="--without-c-extensions"
 
 
-TODO:
-- restore USE_TZ=True
-- TODO purger requests sur o2switch ; too HEAVY.txt
-- Todo réparer tweet X feed on sidebar.txt
 
 
 AJOUTER SIGNATURE LE TIKAMI AUTO SOUS CHAQUE ARTICLE - DONE?

@@ -5,23 +5,8 @@
 {{ block.super }}
 <div class="row">
 
-    <!-- Sidebar -->
-    <div class="col-sm-3">
-        <div class="content-box content-box-bordered mt30-xs mb30">
-            {% placeholder "intro" %}
-        </div>
-
-        {% include "bases/siblings_menu.html" %}
-
-        {#% UNUSED ATM - include_title_tags request.current_page %#}
-
-        <div class="twitter-feeds mt40 mb40">
-            {% static_alias 'twitter-feeds' %}
-        </div>
-    </div>
-
-    <!-- Blog Posts -->
-    <div class="col-sm-9">
+    <!-- Blog Post -->
+    <div class="col-md-10 col-md-offset-1">
         <div class="blog-post mb40">
             <div class="view image-hover-1 no-margin img-responsive-wrapper">
                 <!-- Blog Thumb -->
@@ -53,11 +38,20 @@
 
                 <h1>{% page_attribute "title" %}</h1>
 
+                <div class="content-box content-box-bordered mt30 mb30">
+                    {% placeholder "intro" %}
+                </div>
+
                 {% placeholder "content" %}
 
                 {% static_alias 'after-article' %}
 
                 {# <a class="btn btn-rw btn-primary mt10" href="#">Read more</a> #}
+
+                <div class="mt40">
+                    {% include "bases/siblings_menu.html" %}
+                </div>
+
                 <div class="disqus-comments mt40">
                     {% static_alias 'disqus-comments' %}
                 </div>
