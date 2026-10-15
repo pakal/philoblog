@@ -380,26 +380,6 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/55/98/d25b1926aa859e29cbca670e998f0b7a236de19834e5b803fa0ec5ec0c17/djangocms-attributes-field-1.2.0.tar.gz", hash = "sha256:33e00b28b2f3cb4d09a1423cb613d1ab467e8df78446a04df77e725ac1db05a4", size = 10731, upload-time = "2020-01-22T15:10:48.352Z" }
 
 [[package]]
-name = "djangocms-column"
-version = "1.9.0"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "django" },
-    { name = "django-cms" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/76/a8/132e48efc395c49f35630b5ee69652708e9a4bbbe1f51c3664ae8df32ae9/djangocms-column-1.9.0.tar.gz", hash = "sha256:6d6896707e68ecf24759d334fe3efe8fe75ebc2e72c4bf964ea120937ee998e3", size = 23807, upload-time = "2018-11-07T13:52:58.465Z" }
-
-[[package]]
-name = "djangocms-googlemap"
-version = "1.4.0"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "django-cms" },
-    { name = "django-filer" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/05/73/31d432f54f932f23ed6796e1809f13fb47e50f4b6a6f42076fbf753a1b90/djangocms-googlemap-1.4.0.tar.gz", hash = "sha256:84c350c5c4ee0c6a773d611366d080b79236855033db2b21131652a874a8d155", size = 38590, upload-time = "2020-01-29T15:32:15.562Z" }
-
-[[package]]
 name = "djangocms-link"
 version = "2.4.0"
 source = { registry = "https://pypi.org/simple" }
@@ -444,16 +424,6 @@ dependencies = [
     { name = "django-cms" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/95/43/03e9679c13cc8130d4c1d9496476227c3469735a5e1e731b41fc1cbb9b7f/djangocms-snippet-2.3.0.tar.gz", hash = "sha256:05f8fefac98ba3d4e8de83a863f42648d0ad752cae4edb0243a9a774ab8274c6", size = 26210, upload-time = "2020-01-29T16:12:14.631Z" }
-
-[[package]]
-name = "djangocms-style"
-version = "2.3.0"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "django-cms" },
-    { name = "djangocms-attributes-field" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/d7/05/bdf0baa79a4adb7543f41ca0aa3fc49e390085721bdcb64248a0918446c4/djangocms-style-2.3.0.tar.gz", hash = "sha256:8d4a104d94bf0c3637d2675ad15e112fd60e3dba415b3b99e7e1d1f0c23f6b92", size = 21488, upload-time = "2020-01-29T16:01:58.51Z" }
 
 [[package]]
 name = "djangocms-text-ckeditor"
@@ -568,13 +538,10 @@ dependencies = [
     { name = "django-tinymce" },
     { name = "django-treebeard" },
     { name = "djangocms-admin-style" },
-    { name = "djangocms-column" },
-    { name = "djangocms-googlemap" },
     { name = "djangocms-link" },
     { name = "djangocms-page-sitemap" },
     { name = "djangocms-page-tags" },
     { name = "djangocms-snippet" },
-    { name = "djangocms-style" },
     { name = "djangocms-text-ckeditor" },
     { name = "easy-thumbnails" },
     { name = "html5lib" },
@@ -620,13 +587,10 @@ requires-dist = [
     { name = "django-tinymce", specifier = "==2.8.0" },
     { name = "django-treebeard", specifier = "==4.3.1" },
     { name = "djangocms-admin-style", specifier = "==1.4.0" },
-    { name = "djangocms-column", specifier = "==1.9.0" },
-    { name = "djangocms-googlemap", specifier = "==1.4.0" },
     { name = "djangocms-link", specifier = "==2.4.0" },
     { name = "djangocms-page-sitemap", specifier = "==0.5.3" },
     { name = "djangocms-page-tags", specifier = "==0.8.0" },
     { name = "djangocms-snippet", specifier = "==2.3.0" },
-    { name = "djangocms-style", specifier = "==2.3.0" },
     { name = "djangocms-text-ckeditor", specifier = "==3.7.0" },
     { name = "easy-thumbnails", specifier = "==2.7" },
     { name = "html5lib", specifier = "==0.999999999" },
