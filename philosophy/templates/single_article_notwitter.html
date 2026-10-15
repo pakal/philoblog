@@ -39,7 +39,7 @@
             <div class="blog-post-holder">
                 <ul class="list-inline posted-info">
                     {% page_attribute "changed_date" as changed_date %}
-                    <li>{% trans "Last edited:" %} {{ changed_date|date:"SHORT_DATE_FORMAT" }}</li>
+                    <li>{% trans "Last edited:" %} {{ changed_date|date:"j N Y" }}</li>
                 </ul>
                 <hr align="left" style="width:50px;" class="mt15 mb10">
 
