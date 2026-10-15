@@ -136,7 +136,7 @@ sdist = { url = "https://files.pythonhosted.org/packages/19/22/39385390e854356a1
 
 [[package]]
 name = "django-cms"
-version = "3.9.0"
+version = "3.10.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "django" },
@@ -147,7 +147,7 @@ dependencies = [
     { name = "djangocms-admin-style" },
 ]
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/1a/d0/6531e339d0e0c4b5e2fb6ce3112ec164c3e8a7d61d4658c1be85fcd71af4/django_cms-3.9.0-py2.py3-none-any.whl", hash = "sha256:6feaa6f3b7f225e08f221cf33d6135a1e268e9b781dae4bf916239c3f54e7b27", size = 2085001, upload-time = "2021-06-29T16:41:02.335Z" },
+    { url = "https://files.pythonhosted.org/packages/80/29/77fff1c127eff9ea36bffe0b795bf0a5e7bf324855b6870af6a92d255682/django_cms-3.10.1-py2.py3-none-any.whl", hash = "sha256:e798d2a934a490f12cf1e98edd2f72930ea29217ea3dc4507d10331de233e216", size = 2091802, upload-time = "2022-06-27T23:39:05.442Z" },
 ]
 
 [[package]]
@@ -583,7 +583,7 @@ requires-dist = [
     { name = "decorator", specifier = "==4.4.0" },
     { name = "django", specifier = "==3.1.14" },
     { name = "django-classy-tags", specifier = "==1.0.0" },
-    { name = "django-cms", specifier = "==3.9.0" },
+    { name = "django-cms", specifier = "==3.10.1" },
     { name = "django-compat-patcher", specifier = "==0.14" },
     { name = "django-compressor", specifier = "==2.4" },
     { name = "django-environ", specifier = "==0.4.5" },
