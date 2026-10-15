@@ -121,7 +121,7 @@ sdist = { url = "https://files.pythonhosted.org/packages/19/22/39385390e854356a1
 
 [[package]]
 name = "django-cms"
-version = "3.6.0"
+version = "3.7.4"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "django" },
@@ -130,10 +130,11 @@ dependencies = [
     { name = "django-sekizai" },
     { name = "django-treebeard" },
     { name = "djangocms-admin-style" },
+    { name = "six" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/d6/18/0fe63d3c68ec973d96657a9145bd487d009b2a7837f0706d07a2861e4217/django-cms-3.6.0.tar.gz", hash = "sha256:9c8fa13d9948b73f1d046a00454922af8d8c52c8d17b88de5466d14fcd9e304a", size = 4962654, upload-time = "2019-01-29T13:02:34.142Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/d6/56/c6482e6489c1979955f1e5e6e4559b47249babd6840b49bbdb5cb86df38a/django-cms-3.7.4.tar.gz", hash = "sha256:9374af5a35bac590f1891031fb0878a0e6c2dc5309a6907929c6a036493694f6", size = 4790793, upload-time = "2020-07-21T14:44:21.617Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/72/6c/198395404d238685b7a2ef031cac42f095f0ff7f1da8b87ec27158e04f9b/django_cms-3.6.0-py2.py3-none-any.whl", hash = "sha256:873a87cf5aa8b01050b31cda59998f88033f37ecaf1c3778feb1f916670f3aa0", size = 2896707, upload-time = "2019-01-29T13:02:24.779Z" },
+    { url = "https://files.pythonhosted.org/packages/65/94/c83604c231d118ae53bb8f279a0f1f6ce36d2de0433a177121571d762ba0/django_cms-3.7.4-py2.py3-none-any.whl", hash = "sha256:9302f0e21153fc9afca55d9c3424ca3654b51d274a1af6ec39f4fbb05059fe46", size = 2697082, upload-time = "2020-07-21T14:44:19.889Z" },
 ]
 
 [[package]]
@@ -391,14 +392,14 @@ sdist = { url = "https://files.pythonhosted.org/packages/e4/ef/04a89a21a9501fdf6
 
 [[package]]
 name = "djangocms-page-sitemap"
-version = "0.5.3"
+version = "0.8.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "django-cms" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/f9/0f/ef35a508187bb7b4d5087266b5ade282d209755ff17dfdcc8d39342de5db/djangocms-page-sitemap-0.5.3.tar.gz", hash = "sha256:40af07cc844b6092d2514aa1d4c37c5c55c79574bd7c85b25482d0eff2ad836d", size = 18266, upload-time = "2019-03-09T09:42:54.441Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/74/cd/d53505c6a9448159a4c787d664a67328c13883de795dd8c9ea00e821a5b9/djangocms-page-sitemap-0.8.1.tar.gz", hash = "sha256:80c38c83f95ecf0528098465ed2946718adf715b4afd91d004bda56571d480de", size = 12858, upload-time = "2020-05-02T21:53:15.119Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/cb/78/96fda215685ed45a3ba93818799725c30755b301180a3f11ff53fc1eb2c4/djangocms_page_sitemap-0.5.3-py2.py3-none-any.whl", hash = "sha256:5619c30823cf68a6f15675e11fcb267795439dbdb79bd7b9538116bc38af8b99", size = 19828, upload-time = "2019-03-09T09:42:52.58Z" },
+    { url = "https://files.pythonhosted.org/packages/8f/37/602f859340bbb7455726dd340a75db6389d9df5eaf523581c5d4be07524a/djangocms_page_sitemap-0.8.1-py2.py3-none-any.whl", hash = "sha256:20da6ee89cbc6e442a3703b0807b67b1568d3546559dd30b87284a5ea141919c", size = 14021, upload-time = "2020-05-02T21:53:13.605Z" },
 ]
 
 [[package]]
@@ -569,7 +570,7 @@ requires-dist = [
     { name = "decorator", specifier = "==4.4.0" },
     { name = "django", specifier = "==2.1.11" },
     { name = "django-classy-tags", specifier = "==1.0.0" },
-    { name = "django-cms", specifier = "==3.6.0" },
+    { name = "django-cms", specifier = "==3.7.4" },
     { name = "django-compat-patcher", specifier = "==0.8" },
     { name = "django-compressor", specifier = "==2.4" },
     { name = "django-environ", specifier = "==0.4.5" },
@@ -588,7 +589,7 @@ requires-dist = [
     { name = "django-treebeard", specifier = "==4.3.1" },
     { name = "djangocms-admin-style", specifier = "==1.4.0" },
     { name = "djangocms-link", specifier = "==2.4.0" },
-    { name = "djangocms-page-sitemap", specifier = "==0.5.3" },
+    { name = "djangocms-page-sitemap", specifier = "==0.8.1" },
     { name = "djangocms-page-tags", specifier = "==0.8.0" },
     { name = "djangocms-snippet", specifier = "==2.3.0" },
     { name = "djangocms-text-ckeditor", specifier = "==3.7.0" },
