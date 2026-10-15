@@ -122,7 +122,7 @@ sdist = { url = "https://files.pythonhosted.org/packages/19/22/39385390e854356a1
 
 [[package]]
 name = "django-cms"
-version = "3.7.4"
+version = "3.8.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "django" },
@@ -131,11 +131,10 @@ dependencies = [
     { name = "django-sekizai" },
     { name = "django-treebeard" },
     { name = "djangocms-admin-style" },
-    { name = "six" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/d6/56/c6482e6489c1979955f1e5e6e4559b47249babd6840b49bbdb5cb86df38a/django-cms-3.7.4.tar.gz", hash = "sha256:9374af5a35bac590f1891031fb0878a0e6c2dc5309a6907929c6a036493694f6", size = 4790793, upload-time = "2020-07-21T14:44:21.617Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/b5/70/c86360486ba715635490f2c740e2f61f8f9197738f0730f9ec386bccfc39/django-cms-3.8.0.tar.gz", hash = "sha256:1d33325b630828e0246a0354c504f7137c5bb194a2c34ea7cfaeafe2bec71cc3", size = 4865689, upload-time = "2020-10-28T12:26:00.084Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/65/94/c83604c231d118ae53bb8f279a0f1f6ce36d2de0433a177121571d762ba0/django_cms-3.7.4-py2.py3-none-any.whl", hash = "sha256:9302f0e21153fc9afca55d9c3424ca3654b51d274a1af6ec39f4fbb05059fe46", size = 2697082, upload-time = "2020-07-21T14:44:19.889Z" },
+    { url = "https://files.pythonhosted.org/packages/91/23/9a519d97dbdc0f0347f69020e06322011aea472728819eeb7df477b1da45/django_cms-3.8.0-py2.py3-none-any.whl", hash = "sha256:54c51bd1c4422f66712e931adfcfa6e62347e7e22e6e209aaa84290cc43a2bd7", size = 2708156, upload-time = "2020-10-28T12:25:57.102Z" },
 ]
 
 [[package]]
@@ -571,7 +570,7 @@ requires-dist = [
     { name = "decorator", specifier = "==4.4.0" },
     { name = "django", specifier = "==2.2.28" },
     { name = "django-classy-tags", specifier = "==1.0.0" },
-    { name = "django-cms", specifier = "==3.7.4" },
+    { name = "django-cms", specifier = "==3.8.0" },
     { name = "django-compat-patcher", specifier = "==0.8" },
     { name = "django-compressor", specifier = "==2.4" },
     { name = "django-environ", specifier = "==0.4.5" },
