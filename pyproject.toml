@@ -34,7 +34,7 @@ dependencies = [
     "djangocms-file==3.0.1",  # replaces abandoned cmsplugin-filer (file)
     "djangocms-admin-style==3.3.1",
     "djangocms-text==1.0.2",  # replaces the deprecated djangocms-text-ckeditor
-    "cmsplugin-rst",
+    "cmsplugin-rst==0.3",
     "cmsplugin-raw-html",
     "djangocms-page-sitemap==1.4.0",
 
@@ -65,5 +65,4 @@ override-dependencies = [
 ]
 
 [tool.uv.sources]
-cmsplugin-rst = { git = "https://github.com/pakal/cmsplugin-rst" }
 cmsplugin-raw-html = { git = "https://github.com/makukha/cmsplugin-raw-html" }

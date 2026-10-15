@@ -53,11 +53,15 @@ dependencies = [
 [[package]]
 name = "cmsplugin-rst"
 version = "0.3"
-source = { git = "https://github.com/pakal/cmsplugin-rst#704901cf3705eac6b2f4a8500151b5b0ae7ac2b9" }
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "django" },
     { name = "django-cms" },
     { name = "docutils" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/96/70/71d6b08856635de5cf3be1c8953be4c9258bc1bb6e1c1419a41a8bd5b697/cmsplugin_rst-0.3.tar.gz", hash = "sha256:891d5952470a5166af9c0b69dd74e3464057d536d605cd7f5046301340e2afda", size = 22411, upload-time = "2026-10-15T19:36:39.17Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/5c/9c/bb8f032fa1a24652cdf82b4cf13bceb2c959e1d887bef9a799749f3de273/cmsplugin_rst-0.3-py3-none-any.whl", hash = "sha256:36983fe56ec1a186b135781653896437852ea24e8e18b9b3e296ed7246f0c30b", size = 19512, upload-time = "2026-10-15T19:36:38.179Z" },
 ]
 
 [[package]]
@@ -657,7 +661,7 @@ dev = [
 requires-dist = [
     { name = "beautifulsoup4", specifier = "==4.15.0" },
     { name = "cmsplugin-raw-html", git = "https://github.com/makukha/cmsplugin-raw-html" },
-    { name = "cmsplugin-rst", git = "https://github.com/pakal/cmsplugin-rst" },
+    { name = "cmsplugin-rst", specifier = "==0.3" },
     { name = "decorator", specifier = "==5.3.1" },
     { name = "django", specifier = "==6.1.2" },
     { name = "django-classy-tags", specifier = "==4.1.0" },
