@@ -4,11 +4,23 @@ requires-python = "==3.7.*"
 
 [manifest]
 overrides = [
-    { name = "django", specifier = "==2.2.28" },
+    { name = "django", specifier = "==3.0.14" },
     { name = "rcssmin", specifier = "==1.1.1" },
     { name = "rjsmin", specifier = "==1.2.1" },
 ]
 build-constraints = [{ name = "setuptools", specifier = "<58" }]
+
+[[package]]
+name = "asgiref"
+version = "3.7.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "typing-extensions" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/12/19/64e38c1c2cbf0da9635b7082bbdf0e89052e93329279f59759c24a10cc96/asgiref-3.7.2.tar.gz", hash = "sha256:9e0ce3aa93a819ba5b45120216b23878cf6e8525eb3848653452b4192b92afed", size = 33393, upload-time = "2023-05-27T17:21:42.12Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/9b/80/b9051a4a07ad231558fcd8ffc89232711b4e618c15cb7a392a17384bbeef/asgiref-3.7.2-py3-none-any.whl", hash = "sha256:89b2ef2247e3b562a16eef663bc0e2e703ec6468e2fa8a5cd61cd449786d4f6e", size = 24140, upload-time = "2023-05-27T17:21:40.454Z" },
+]
 
 [[package]]
 name = "beautifulsoup4"
@@ -87,15 +99,16 @@ wheels = [
 
 [[package]]
 name = "django"
-version = "2.2.28"
+version = "3.0.14"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
+    { name = "asgiref" },
     { name = "pytz" },
     { name = "sqlparse" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/17/27/24d66baeb05a53e38637a4b793df069f2bebacf75bc6e854ff32068a7ef3/Django-2.2.28.tar.gz", hash = "sha256:0200b657afbf1bc08003845ddda053c7641b9b24951e52acd51f6abda33a7413", size = 9187543, upload-time = "2022-04-11T07:53:05.463Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/76/0e/5d847a77b7b42cacd01405b45e4e370124c1d8a15970865df5ab0f09f83a/Django-3.0.14.tar.gz", hash = "sha256:d58d8394036db75a81896037d757357e79406e8f68816c3e8a28721c1d9d4c11", size = 9259569, upload-time = "2021-04-06T07:35:07.952Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/43/69/eaac9a827335898d626066989865974fa48bfc23efd1b34628d64543b2d9/Django-2.2.28-py3-none-any.whl", hash = "sha256:365429d07c1336eb42ba15aa79f45e1c13a0b04d5c21569e7d596696418a6a45", size = 7468548, upload-time = "2022-04-11T07:52:52.782Z" },
+    { url = "https://files.pythonhosted.org/packages/34/3b/393482eb369b3c50608b66feac8eabd4c5c15ae80468fb1eccc0b9c136a2/Django-3.0.14-py3-none-any.whl", hash = "sha256:9bc7aa619ed878fedba62ce139abe663a147dccfd20e907725ec11e02a1ca225", size = 7461625, upload-time = "2021-04-06T07:34:56.099Z" },
 ]
 
 [[package]]
@@ -139,14 +152,14 @@ wheels = [
 
 [[package]]
 name = "django-compat-patcher"
-version = "0.8"
+version = "0.14"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "compat-patcher-core" },
     { name = "django" },
     { name = "six" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/81/fc/61f0c756d33fc22e27c77b9c2fb71f2e01c331e4d0ca6ce2609af2cfb3b7/django-compat-patcher-0.8.tar.gz", hash = "sha256:5a3e00fa45bcb486ac674f88d024b8bdb3a10622e4904bf3acba3241f0a3e266", size = 80322, upload-time = "2020-08-22T12:08:44.024Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/ad/c9/317fd7b59d64b1ca1bc1eb0253eb54fc6146960cb8295ff40d96e3bbbc65/django_compat_patcher-0.14.tar.gz", hash = "sha256:8f078e84ce229a389958f134949df0c2ca341dc9b92cbfeab16bff89a1302bce", size = 109242, upload-time = "2026-10-14T08:51:27.737Z" }
 
 [[package]]
 name = "django-compressor"
@@ -568,10 +581,10 @@ requires-dist = [
     { name = "cmsplugin-raw-html", git = "https://github.com/makukha/cmsplugin-raw-html" },
     { name = "cmsplugin-rst", git = "https://github.com/pakal/cmsplugin-rst" },
     { name = "decorator", specifier = "==4.4.0" },
-    { name = "django", specifier = "==2.2.28" },
+    { name = "django", specifier = "==3.0.14" },
     { name = "django-classy-tags", specifier = "==1.0.0" },
     { name = "django-cms", specifier = "==3.8.0" },
-    { name = "django-compat-patcher", specifier = "==0.8" },
+    { name = "django-compat-patcher", specifier = "==0.14" },
     { name = "django-compressor", specifier = "==2.4" },
     { name = "django-environ", specifier = "==0.4.5" },
     { name = "django-extensions", specifier = "==2.2.8" },
@@ -757,6 +770,15 @@ name = "surlex"
 version = "0.2.0"
 source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/f9/00/1960f2abf76dbdda9b2cbbf42d3c51d036ec987d721ddb3565b3c4ba2054/surlex-0.2.0.tar.gz", hash = "sha256:62057b52d147bf83aec36205a42a0080e0a0de4d6c8b8d6ae56adf477253b2df", size = 5491, upload-time = "2013-11-08T03:42:41.843Z" }
+
+[[package]]
+name = "typing-extensions"
+version = "4.7.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/3c/8b/0111dd7d6c1478bf83baa1cab85c686426c7a6274119aceb2bd9d35395ad/typing_extensions-4.7.1.tar.gz", hash = "sha256:b75ddc264f0ba5615db7ba217daeb99701ad295353c45f9e95963337ceeeffb2", size = 72876, upload-time = "2023-07-02T14:20:55.045Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ec/6b/63cc3df74987c36fe26157ee12e09e8f9db4de771e0f3404263117e75b95/typing_extensions-4.7.1-py3-none-any.whl", hash = "sha256:440d5dd3af93b060174bf433bccd69b0babc3b15b1a8dca43789fd7f61514b36", size = 33232, upload-time = "2023-07-02T14:20:53.275Z" },
+]
 
 [[package]]
 name = "unicodecsv"
