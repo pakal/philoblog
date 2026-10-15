@@ -2,11 +2,11 @@
 name = "philosophy"
 version = "0.1.0"
 description = "Regard Humaniste - django-cms website"
-requires-python = "==3.7.*"
+requires-python = "==3.10.*"
 dependencies = [
     "pytz",
     "logging_tree",
-    "html5lib==0.999999999",  # last version with "html5lib.sanitizer" required (or not anymore?) by djangocms_text_ckeditor
+    "html5lib==1.1",  # 0.999999999 used the "collections.Mapping" alias removed in Python 3.10
     "Pillow>=2.7.0",
     "six",
     "decorator==4.4.0",
