@@ -239,3 +239,7 @@ form input[type=file] {
 .cms-plugin img.filer_image.right {
     margin-left: 10px;
 }
+
+.mw-100 {
+    max-width: 100% !important;
+}
