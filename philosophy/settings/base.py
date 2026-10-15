@@ -109,7 +109,7 @@ INSTALLED_APPS = [
     'parler',
     'djangocms_versioning',
     'djangocms_alias',
-    'djangocms_text_ckeditor',
+    'djangocms_text',
     'filer',
     'easy_thumbnails',
     'djangocms_picture',
@@ -238,14 +238,12 @@ COMPRESS_PRECOMPILERS = (
 )
 
 
-## CKEDITOR SETTINGS ##
-#See http://docs.cksource.com/ckeditor_api/symbols/CKEDITOR.config.html for all settings
+## djangocms-text settings (TipTap editor, accepting the toolbar format of the former CKEditor 4) ##
 
-CKEDITOR_SETTINGS = {
-            #'height': '320px',
+TEXT_EDITOR_SETTINGS = {
             'toolbar_CMS': [
                 ['Undo', 'Redo'],
-                ['cmsplugins', '-', 'ShowBlocks'],
+                ['CMSPlugins', '-', 'ShowBlocks'],
                 ['Font', 'FontSize', 'Format', 'Styles'],
                 ['TextColor', 'BGColor', '-', 'PasteText', 'PasteFromWord'],
                 ['Maximize', ''],
@@ -257,9 +255,6 @@ CKEDITOR_SETTINGS = {
                 ['Source']
             ],
 }
-
-TAGGIT_CASE_INSENSITIVE = True
-
 
 CMSPLUGIN_RST_SETTINGS_OVERRIDES = {"initial_header_level": 2, # minimum "h2" when rendered to html
                                     "smart_quotes": "alt"}

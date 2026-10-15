@@ -34,7 +34,7 @@ dependencies = [
     "djangocms-picture==4.1.1",  # replaces abandoned cmsplugin-filer (image)
     "djangocms-file==3.0.1",  # replaces abandoned cmsplugin-filer (file)
     "djangocms-admin-style==3.3.1",
-    "djangocms-text-ckeditor==5.1.7",
+    "djangocms-text==1.0.2",  # replaces the deprecated djangocms-text-ckeditor
     "cmsplugin-rst",
     "cmsplugin-raw-html",
     "djangocms-page-sitemap==1.4.0",
