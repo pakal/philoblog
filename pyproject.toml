@@ -15,7 +15,7 @@ dependencies = [
     "python-memcached==1.59",
     "setuptools<58",  # runtime "pkg_resources" import by django-polymorphic
 
-    "Django==5.0.14",  # can't switch to 2.2.1 until PyMysql gets updated to match MySQLdb
+    "Django==5.1.15",  # can't switch to 2.2.1 until PyMysql gets updated to match MySQLdb
     "django-compat-patcher==0.14",
 
     "django-environ==0.4.5",
@@ -56,14 +56,14 @@ dependencies = [
 
 [dependency-groups]
 dev = [
-    "django-debug-toolbar==2.2.1",
+    "django-debug-toolbar==6.3.0",
 ]
 
 [tool.uv]
 package = false
 # Old packages declaring obsolete upper bounds, that pip used to ignore
 override-dependencies = [
-    "Django==5.0.14",  # django-terms 1.2.0 declares django<1.10
+    "Django==5.1.15",  # django-terms 1.2.0 declares django<1.10
     "rcssmin==1.1.1",  # django-compressor 2.4 pins 1.0.6, which has no Windows wheel
     "rjsmin==1.2.1",  # django-compressor 2.4 pins 1.1.0, which has no Windows wheel
 ]

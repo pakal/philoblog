@@ -4,7 +4,7 @@ requires-python = "==3.10.*"
 
 [manifest]
 overrides = [
-    { name = "django", specifier = "==5.0.14" },
+    { name = "django", specifier = "==5.1.15" },
     { name = "rcssmin", specifier = "==1.1.1" },
     { name = "rjsmin", specifier = "==1.2.1" },
 ]
@@ -12,14 +12,14 @@ build-constraints = [{ name = "setuptools", specifier = "<58" }]
 
 [[package]]
 name = "asgiref"
-version = "3.7.2"
+version = "3.12.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "typing-extensions" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/12/19/64e38c1c2cbf0da9635b7082bbdf0e89052e93329279f59759c24a10cc96/asgiref-3.7.2.tar.gz", hash = "sha256:9e0ce3aa93a819ba5b45120216b23878cf6e8525eb3848653452b4192b92afed", size = 33393, upload-time = "2023-05-27T17:21:42.12Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/e6/26/3b59f2bdae5f640389becb1f673cded775287f5fc4f816309d9ca9a3f93d/asgiref-3.12.1.tar.gz", hash = "sha256:59dcb51c272ad209d59bed5708a64a333083e86017d7fcdd67498eeab7784340", size = 42378, upload-time = "2026-07-14T09:56:18.087Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/9b/80/b9051a4a07ad231558fcd8ffc89232711b4e618c15cb7a392a17384bbeef/asgiref-3.7.2-py3-none-any.whl", hash = "sha256:89b2ef2247e3b562a16eef663bc0e2e703ec6468e2fa8a5cd61cd449786d4f6e", size = 24140, upload-time = "2023-05-27T17:21:40.454Z" },
+    { url = "https://files.pythonhosted.org/packages/c0/1b/54f4ad77cd8a584fa70746c47df988e002cf1ee1eba43364d46f87803647/asgiref-3.12.1-py3-none-any.whl", hash = "sha256:fe386d1c2bff7259ea95929266d12a8cf9a8b5a1c2598402967d8792e7a7c094", size = 25478, upload-time = "2026-07-14T09:56:16.926Z" },
 ]
 
 [[package]]
@@ -81,16 +81,16 @@ wheels = [
 
 [[package]]
 name = "django"
-version = "5.0.14"
+version = "5.1.15"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "asgiref" },
     { name = "sqlparse" },
     { name = "tzdata", marker = "sys_platform == 'win32'" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/9d/a4/cc0205045386b5be8eecb15a95f290383d103f0db5f7e34f93dcc340d5b0/Django-5.0.14.tar.gz", hash = "sha256:29019a5763dbd48da1720d687c3522ef40d1c61be6fb2fad27ed79e9f655bc11", size = 10644306, upload-time = "2025-04-02T11:24:41.396Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/10/45/1ac68964193cfcc0b0912a0f68025d5bdb54f71ba7b8716e85b959874bd0/django-5.1.15.tar.gz", hash = "sha256:46a356b5ff867bece73fc6365e081f21c569973403ee7e9b9a0316f27d0eb947", size = 10719662, upload-time = "2025-12-02T14:01:31.931Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/c0/93/eabde8789f41910845567ebbff5aacd52fd80e54c934ce15b83d5f552d2c/Django-5.0.14-py3-none-any.whl", hash = "sha256:e762bef8629ee704de215ebbd32062b84f4e56327eed412e5544f6f6eb1dfd74", size = 8185934, upload-time = "2025-04-02T11:24:36.888Z" },
+    { url = "https://files.pythonhosted.org/packages/27/79/372e091f0eba4ddb8228245ccd1baaa140e9658711f5e3a0056e540b4c1e/django-5.1.15-py3-none-any.whl", hash = "sha256:117871e58d6eda37f09870b7d73a3d66567b03aecd515b386b1751177c413432", size = 8260901, upload-time = "2025-12-02T14:01:27.352Z" },
 ]
 
 [[package]]
@@ -161,15 +161,15 @@ wheels = [
 
 [[package]]
 name = "django-debug-toolbar"
-version = "2.2.1"
+version = "6.3.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "django" },
     { name = "sqlparse" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/6b/77/8a874657fac817380a14c6bca0dc88884d997ebb74a6826f1efe3d09d501/django-debug-toolbar-2.2.1.tar.gz", hash = "sha256:7aadab5240796ffe8e93cc7dfbe2f87a204054746ff7ff93cd6d4a0c3747c853", size = 335003, upload-time = "2021-04-14T15:30:06.971Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/d8/ea/b62673424dd72d2dbf5adf4145281a421d5792f47380d9bc8e3b11e1a769/django_debug_toolbar-6.3.0.tar.gz", hash = "sha256:f830a86fe02e17f625a22cfbed24a5bd1500762e201ec959c50efb0f9327282b", size = 334079, upload-time = "2026-04-02T16:07:01.385Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/9b/23/10394fbb5804c2041dcda675e4a59b4e482c9f93d5526ee49caef70e5d97/django_debug_toolbar-2.2.1-py3-none-any.whl", hash = "sha256:7feaee934608f5cdd95432154be832fe30fda6c1249018191e2c27bc0b6a965e", size = 200773, upload-time = "2021-04-14T15:30:05.057Z" },
+    { url = "https://files.pythonhosted.org/packages/7d/9e/d8c3c845f4b5ccac7377c19f4049e7e00c6f121846a81f69a497b45734df/django_debug_toolbar-6.3.0-py3-none-any.whl", hash = "sha256:a199ce3d0f884739a9096835ad417479fede05f3b3c4824bc8b354721ba8f629", size = 298304, upload-time = "2026-04-02T16:06:59.617Z" },
 ]
 
 [[package]]
@@ -613,7 +613,7 @@ requires-dist = [
     { name = "cmsplugin-raw-html", git = "https://github.com/makukha/cmsplugin-raw-html" },
     { name = "cmsplugin-rst", git = "https://github.com/pakal/cmsplugin-rst" },
     { name = "decorator", specifier = "==4.4.0" },
-    { name = "django", specifier = "==5.0.14" },
+    { name = "django", specifier = "==5.1.15" },
     { name = "django-classy-tags", specifier = "==1.0.0" },
     { name = "django-cms", specifier = "==3.11.11" },
     { name = "django-compat-patcher", specifier = "==0.14" },
@@ -653,7 +653,7 @@ requires-dist = [
 ]
 
 [package.metadata.requires-dev]
-dev = [{ name = "django-debug-toolbar", specifier = "==2.2.1" }]
+dev = [{ name = "django-debug-toolbar", specifier = "==6.3.0" }]
 
 [[package]]
 name = "pillow"
@@ -792,11 +792,11 @@ wheels = [
 
 [[package]]
 name = "sorl-thumbnail"
-version = "12.9.0"
+version = "13.2.0"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/0a/bc/cf201540a1be4a9e086d58bfd90f87225f32725de1df38e424475f8d3060/sorl-thumbnail-12.9.0.tar.gz", hash = "sha256:0cbc2f52152e7f2266e3c2cb4ae5d83afd2e96fd5e1c42e5667362baaa3d2db3", size = 665051, upload-time = "2022-08-30T12:48:38.126Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/7a/c9/9dd02779d9c7fd4a873a0a8a89f1840d748491f0cfa89b111569e96d13aa/sorl_thumbnail-13.2.0.tar.gz", hash = "sha256:f3ae9a997485b316d4a44c2d9bf16eb0ab4aa245c6be743e5d34a728eaab59dd", size = 676262, upload-time = "2026-10-13T20:40:25.177Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/e0/8f/b456e99ffd6270200bb00eabadab06ce3697e2f6d9c61da657dedd7bf814/sorl_thumbnail-12.9.0-py3-none-any.whl", hash = "sha256:ec586724bea7dc8c53561ce18335ea641fcd0e560d6387b2353a2afdd06705a4", size = 41678, upload-time = "2022-08-30T12:48:01.364Z" },
+    { url = "https://files.pythonhosted.org/packages/cf/97/453310d684adb6fb7fb8b2f69031543ecd75162a66faa0d61b2f6edd58f4/sorl_thumbnail-13.2.0-py3-none-any.whl", hash = "sha256:3bf689e9c5ab3b7115bf22b02bca3e65e7d06c4eb76797afd60f9417aa76b7b0", size = 43025, upload-time = "2026-10-13T20:40:23.358Z" },
 ]
 
 [[package]]
