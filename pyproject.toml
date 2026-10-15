@@ -14,7 +14,7 @@ dependencies = [
     "beautifulsoup4==4.15.0",
     "python-memcached==1.62",
 
-    "Django==5.1.15",
+    "Django==5.2.18",
     "django-compat-patcher==0.14",
 
     "django-environ==0.14.0",
@@ -62,7 +62,7 @@ dev = [
 package = false
 # Old packages declaring obsolete upper bounds, that pip used to ignore
 override-dependencies = [
-    "Django==5.1.15",  # django-terms 1.2.0 declares django<1.10
+    "Django==5.2.18",  # django-terms 1.2.0 declares django<1.10
 ]
 
 [tool.uv.sources]
