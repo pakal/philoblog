@@ -135,7 +135,7 @@ sdist = { url = "https://files.pythonhosted.org/packages/19/22/39385390e854356a1
 
 [[package]]
 name = "django-cms"
-version = "3.8.0"
+version = "3.9.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "django" },
@@ -145,9 +145,8 @@ dependencies = [
     { name = "django-treebeard" },
     { name = "djangocms-admin-style" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/b5/70/c86360486ba715635490f2c740e2f61f8f9197738f0730f9ec386bccfc39/django-cms-3.8.0.tar.gz", hash = "sha256:1d33325b630828e0246a0354c504f7137c5bb194a2c34ea7cfaeafe2bec71cc3", size = 4865689, upload-time = "2020-10-28T12:26:00.084Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/91/23/9a519d97dbdc0f0347f69020e06322011aea472728819eeb7df477b1da45/django_cms-3.8.0-py2.py3-none-any.whl", hash = "sha256:54c51bd1c4422f66712e931adfcfa6e62347e7e22e6e209aaa84290cc43a2bd7", size = 2708156, upload-time = "2020-10-28T12:25:57.102Z" },
+    { url = "https://files.pythonhosted.org/packages/1a/d0/6531e339d0e0c4b5e2fb6ce3112ec164c3e8a7d61d4658c1be85fcd71af4/django_cms-3.9.0-py2.py3-none-any.whl", hash = "sha256:6feaa6f3b7f225e08f221cf33d6135a1e268e9b781dae4bf916239c3f54e7b27", size = 2085001, upload-time = "2021-06-29T16:41:02.335Z" },
 ]
 
 [[package]]
@@ -583,7 +582,7 @@ requires-dist = [
     { name = "decorator", specifier = "==4.4.0" },
     { name = "django", specifier = "==3.0.14" },
     { name = "django-classy-tags", specifier = "==1.0.0" },
-    { name = "django-cms", specifier = "==3.8.0" },
+    { name = "django-cms", specifier = "==3.9.0" },
     { name = "django-compat-patcher", specifier = "==0.14" },
     { name = "django-compressor", specifier = "==2.4" },
     { name = "django-environ", specifier = "==0.4.5" },
