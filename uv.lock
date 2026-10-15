@@ -296,19 +296,6 @@ wheels = [
 ]
 
 [[package]]
-name = "django-request"
-version = "1.7.1"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "django" },
-    { name = "python-dateutil" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/0e/8b/d490d2a1f61bc1f33d42765644b46b356ee3056bd892ecf1fee45f94ac28/django_request-1.7.1.tar.gz", hash = "sha256:a4c9dcfe5a9c61765f26e98269df2b8de492fa319ed0eacd41c8bcd4d7b181e4", size = 80825, upload-time = "2025-10-16T10:31:56.187Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/94/cf/89ec73c050cb68a73d18c32bc1af3532274cc89041cf5a3b391270767545/django_request-1.7.1-py3-none-any.whl", hash = "sha256:5c386fe66c056999cefafb700c7e81c57e011b43574a052689bdf30fb7bfa023", size = 85108, upload-time = "2025-10-16T10:31:54.652Z" },
-]
-
-[[package]]
 name = "django-reversion"
 version = "6.4.0"
 source = { registry = "https://pypi.org/simple" }
@@ -635,7 +622,6 @@ dependencies = [
     { name = "django-mptt" },
     { name = "django-newsletter" },
     { name = "django-polymorphic" },
-    { name = "django-request" },
     { name = "django-reversion" },
     { name = "django-sekizai" },
     { name = "django-terms" },
@@ -684,7 +670,6 @@ requires-dist = [
     { name = "django-mptt", specifier = "==0.18.0" },
     { name = "django-newsletter", specifier = "==1.2.1" },
     { name = "django-polymorphic", specifier = "==4.11.7" },
-    { name = "django-request", specifier = "==1.7.1" },
     { name = "django-reversion", specifier = "==6.4.0" },
     { name = "django-sekizai", specifier = "==4.1.0" },
     { name = "django-terms", specifier = "==1.2.0" },
@@ -771,18 +756,6 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/b1/d4/c15b459e25a23767d2f4065ef40968920320f04e302889574310c21c96a3/pymysql-1.2.3.tar.gz", hash = "sha256:d5b288529782e536ae171866df3ca9dc4f6cbfb3cc2f18e6f837fbb90dbc262b", size = 50629, upload-time = "2026-09-17T12:22:49.146Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/a9/4b/0a906d8184f011ff8dbd4722743783867589b33269d2c5fff238d636fdcb/pymysql-1.2.3-py3-none-any.whl", hash = "sha256:14f1c68e2ed859243ae5ca41ffbe677027fc46bc136a9f0be8a4e928e5e7415a", size = 46740, upload-time = "2026-09-17T12:22:47.826Z" },
-]
-
-[[package]]
-name = "python-dateutil"
-version = "2.9.0.post0"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "six" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/66/c0/0c8b6ad9f17a802ee498c46e004a0eb49bc148f2fd230864601a86dcf6db/python-dateutil-2.9.0.post0.tar.gz", hash = "sha256:37dd54208da7e1cd875388217d5e00ebd4179249f90fb72437e91a35459a0ad3", size = 342432, upload-time = "2024-03-01T18:36:20.211Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/ec/57/56b9bcc3c9c6a792fcbaf139543cee77261f3651ca9da0c93f5c1221264b/python_dateutil-2.9.0.post0-py2.py3-none-any.whl", hash = "sha256:a8b2bc7bffae282281c8140a97d3aa9c14da0b136dfe83f850eea9a5f7470427", size = 229892, upload-time = "2024-03-01T18:36:18.57Z" },
 ]
 
 [[package]]

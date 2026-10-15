@@ -86,7 +86,6 @@ MIDDLEWARE = [
     'cms.middleware.page.CurrentPageMiddleware',
     'cms.middleware.toolbar.ToolbarMiddleware',
     'cms.middleware.language.LanguageCookieMiddleware',
-    'request.middleware.RequestMiddleware',  # AFTER auth stuffs
     'django.middleware.cache.FetchFromCacheMiddleware',
 ]
 
@@ -132,8 +131,6 @@ INSTALLED_APPS = [
     'tinymce',
     'django_extensions',
     'newsletter',
-
-    'request',  # analytics
 
     'philosophy'
 ]

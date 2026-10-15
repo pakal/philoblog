@@ -26,7 +26,6 @@ dependencies = [
     "django-polymorphic==4.11.7",
     "django-filer==3.6.0",
     "django-compressor==4.6.0",
-    "django-request==1.7.1",
     "django-extensions==4.1",
 
     "djangocms-link==5.2.0",
