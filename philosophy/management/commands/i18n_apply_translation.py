@@ -97,8 +97,13 @@ class Command(BaseCommand):
         for placeholder in source_placeholders:
             target = target_placeholders.get(placeholder.slot)
             if target is None:
-                self.stderr.write(self.style.WARNING(f"No target placeholder for slot '{placeholder.slot}'"))
-                continue
+                # The current template may no longer declare this slot (eg. "intro", which
+                # holds the category-badge snippet but isn't rendered via {% placeholder %}
+                # anymore -- see category_badge in extra_tags.py), so create_page_content's
+                # automatic placeholder scan won't have created it. Create it explicitly,
+                # mirroring the orphan placeholder still present on the source content.
+                target = target_content.placeholders.create(slot=placeholder.slot)
+                target_placeholders[placeholder.slot] = target
 
             source_list = plugins_by_placeholder[placeholder.pk]
             copied_plugins = copy_plugins_to_placeholder(
