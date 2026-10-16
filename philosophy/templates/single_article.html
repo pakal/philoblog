@@ -1,5 +1,5 @@
 {% extends "bases/base_cms.html" %}
-{% load cms_tags i18n djangocms_alias_tags %}
+{% load cms_tags i18n djangocms_alias_tags extra_tags %}
 
 {% block content %}
 {{ block.super }}
@@ -36,11 +36,11 @@
                 </ul>
                 <hr align="left" style="width:50px;" class="mt15 mb10">
 
-                <h1>{% page_attribute "title" %}</h1>
-
-                <div class="content-box content-box-bordered mt30 mb30">
-                    {% placeholder "intro" %}
-                </div>
+                {% category_badge request.current_page as category %}
+                <h1>
+                    {% if category %}<span class="bordered-icon-xs bordered-icon-color {{ category.icon_class }}" title="{{ category.title }}" style="font-size:14px; vertical-align:middle; margin-right:10px;"></span>{% endif %}
+                    {% page_attribute "title" %}
+                </h1>
 
                 {% placeholder "content" %}
 
@@ -50,10 +50,6 @@
 
                 <div class="mt40">
                     {% include "bases/siblings_menu.html" %}
-                </div>
-
-                <div class="disqus-comments mt40">
-                    {% static_alias 'disqus-comments' %}
                 </div>
             </div>
         </div>
