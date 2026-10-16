@@ -33,10 +33,8 @@
                     {% page_attribute "changed_date" as changed_date %}
                     <span style="white-space:nowrap;">{% trans "Last edited:" %} {{ changed_date|date:"j N Y" }}</span>
                 </div>
-                <hr align="left" style="width:50px;" class="mt15 mb10">
-
                 {% category_badge request.current_page as category %}
-                <h1 style="margin-top:30px;">
+                <h1 style="margin-top:8px;">
                     {% if category %}<span class="bordered-icon-xs bordered-icon-color {{ category.icon_class }}" title="{{ category.title }}" style="font-size:14px; vertical-align:middle; margin-right:10px;"></span>{% endif %}
                     {% page_attribute "title" %}
                 </h1>
