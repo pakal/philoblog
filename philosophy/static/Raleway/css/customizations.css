@@ -227,11 +227,11 @@ form input[type=file] {
     height: auto !important;  // else, breaks the design of file inputs
 }
 
-.cms-plugin img.filer_image.left {
+img.filer_image.left {
     margin-right: 10px;
 }
 
-.cms-plugin img.filer_image.right {
+img.filer_image.right {
     margin-left: 10px;
 }
 
