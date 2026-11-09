@@ -86,7 +86,4 @@ if _enable_smtp:
 if ENVIRONMENT != "development":
     from o2switch_common_prod_settings import *  # may override SMTP, cache etc.
 
-    # That host-provided file predates Django 4.1, so fix what it gets wrong for this project
-    if globals().get("CACHES", {}).get("default", {}).get("BACKEND") == "django.core.cache.backends.memcached.MemcachedCache":
-        CACHES["default"]["BACKEND"] = "django.core.cache.backends.memcached.PyMemcacheCache"  # python-memcached backend was removed
     USE_TZ = True  # its "USE_TZ = False" workaround would misread our UTC-stored datetimes, see base.py
