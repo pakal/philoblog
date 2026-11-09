@@ -12,7 +12,7 @@ dependencies = [
     "decorator==5.3.1",
     "PyYAML==6.0.3",
     "beautifulsoup4==4.15.0",
-    "python-memcached==1.62",
+    "pymemcache==4.0.0",  # for PyMemcacheCache, since the python-memcached backend was removed in Django 4.1
 
     "Django==6.1.2",
     "django-compat-patcher==0.14",
