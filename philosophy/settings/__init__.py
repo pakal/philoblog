@@ -59,10 +59,9 @@ DATABASES = {
     'default': _default_db
 }
 
-# TODO - enforce this to TRUE for prod, later, when SSL gets mandatory
 CSRF_COOKIE_HTTPONLY = False  # we need AJAX...
-CSRF_COOKIE_SECURE = False
-SESSION_COOKIE_SECURE = False
+# HTTPS-only session/CSRF cookies; enable wherever the site is served over HTTPS (logins over plain HTTP then fail)
+CSRF_COOKIE_SECURE = SESSION_COOKIE_SECURE = env.bool("SECURE_COOKIES", default=False)
 
 ## Django-analytics settings
 GOOGLE_ANALYTICS_PROPERTY_ID = env.str("GOOGLE_ANALYTICS_PROPERTY_ID", default=None)  # eg. 'UA-14845987-3'
