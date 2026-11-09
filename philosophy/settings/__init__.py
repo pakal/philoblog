@@ -54,6 +54,11 @@ else:
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
 _default_db = env.db()
 _default_db["HOST"] = _default_db["HOST"] or ""  # workaround until new release of django-environ
+if "mysql" in _default_db["ENGINE"]:
+    # Not every server defaults to strict mode (mysql.W002), so request the sql_mode that MariaDB uses by default
+    # since 10.2.4, which development runs with: values too long for their column raise errors, not get truncated
+    _default_db.setdefault("OPTIONS", {}).setdefault(
+        "init_command", "SET sql_mode='STRICT_TRANS_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION'")
 DATABASES = {
     # Raises ImproperlyConfigured exception if DATABASE_URL not in os.environ
     'default': _default_db
