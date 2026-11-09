@@ -39,6 +39,9 @@ SECRET_KEY = env.str('SECRET_KEY')
 ALLOWED_HOSTS = env.list("ALLOWED_HOSTS")
 SITE_URL = env.str("SITE_URL")
 
+# Needed for admin logins over HTTPS, eg. "https://philosophy.diskover.me,https://religion.diskover.me"
+CSRF_TRUSTED_ORIGINS = env.list("CSRF_TRUSTED_ORIGINS", default=[])
+
 # Database
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
 _default_db = env.db()
