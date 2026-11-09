@@ -41,7 +41,7 @@ STATICFILES_DIRS = (
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
-SITE_ID = 1
+SITE_ID = 1  # overridable through the SITE_ID env var, see settings/__init__.py
 
 # Keep historical int primary keys (no schema change), silences models.W042 since Django 3.2
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
@@ -74,6 +74,7 @@ TEMPLATES = [
 
 MIDDLEWARE = [
     "philosophy.middlewares.ReverseProxyFixer",
+    "philosophy.middlewares.CurrentRequestMiddleware",
     # 'cms.middleware.utils.ApphookReloadMiddleware' -> enable this to autoreload server when apphooks are modified
     "django.middleware.cache.UpdateCacheMiddleware",
     "django.middleware.security.SecurityMiddleware",

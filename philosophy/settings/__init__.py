@@ -42,6 +42,14 @@ SITE_URL = env.str("SITE_URL")
 # Needed for admin logins over HTTPS, eg. "https://philosophy.diskover.me,https://religion.diskover.me"
 CSRF_TRUSTED_ORIGINS = env.list("CSRF_TRUSTED_ORIGINS", default=[])
 
+# A django_site id, or empty to pick the django_site row matching the request's Host header,
+# so that a single instance serves both the philosophy and religion sites
+_site_id = env.str("SITE_ID", default=str(SITE_ID))
+if _site_id:
+    SITE_ID = int(_site_id)
+else:
+    del SITE_ID
+
 # Database
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
 _default_db = env.db()
