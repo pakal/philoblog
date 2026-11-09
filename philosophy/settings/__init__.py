@@ -25,8 +25,8 @@ COMPRESS_ROOT = STATIC_ROOT  # for now, must be writable so
 MEDIA_ROOT = env.str('MEDIA_ROOT')
 MEDIA_ROOT = os.path.join(ROOT_DIR, MEDIA_ROOT) if not os.path.isabs(MEDIA_ROOT) else MEDIA_ROOT
 
-STATIC_URL = env.str('STATIC_URL', default='/static/')
-MEDIA_URL = env.str('MEDIA_URL',  default='/media/')
+STATIC_URL = env.str('STATIC_URL', default=STATIC_URL)  # defaults differ between development.py and production.py
+MEDIA_URL = env.str('MEDIA_URL', default=MEDIA_URL)
 
 # for alert emails
 ADMINS = env.json("ADMINS", default=None)

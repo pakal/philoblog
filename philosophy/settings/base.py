@@ -38,6 +38,9 @@ STATICFILES_FINDERS = (
 )
 STATICFILES_DIRS = (
 )
+STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+
 SITE_ID = 1
 
 # Keep historical int primary keys (no schema change), silences models.W042 since Django 3.2
