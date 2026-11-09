@@ -2,7 +2,7 @@
 name = "philosophy"
 version = "0.1.0"
 description = "Regard Humaniste - django-cms website"
-requires-python = "==3.13.*"
+requires-python = ">=3.12,<3.14"  # prod host only offers Python 3.12, dev uses 3.13
 dependencies = [
     "pytz",
     "logging_tree",
