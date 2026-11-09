@@ -18,8 +18,12 @@ admin.autodiscover()
 ROBOTS_TXT = """
 User-agent: *
 
-Sitemap: https://regard-humaniste.com/fr/sitemap.xml
+Sitemap: %s
 """
+
+
+def robots_txt(request):
+    return HttpResponse(ROBOTS_TXT % request.build_absolute_uri("/fr/sitemap.xml"), content_type="text/plain")
 
 
 # WORKAROUND for cron jobs generating broken i18n urls - https://code.djangoproject.com/ticket/26271
@@ -40,7 +44,7 @@ if settings.DEBUG:
 
 urlpatterns += i18n_patterns(
 
-    url(r'^robots.txt$', lambda r: HttpResponse(ROBOTS_TXT)),
+    url(r'^robots.txt$', robots_txt),
 
     url(r'^admin/', include(admin.site.urls)),  # NOQA
 
