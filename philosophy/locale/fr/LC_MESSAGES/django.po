@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-03 20:27+0200\n"
+"POT-Creation-Date: 2026-11-09 14:33+0100\n"
 "PO-Revision-Date: 2016-07-03 20:28+0200\n"
 "Last-Translator: Pascal <chambon.pascal@gmail.com>\n"
 "Language-Team: Nothing\n"
@@ -17,18 +17,42 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Virtaal 0.7.1\n"
 
-#: .\settings\base.py:138
+#: .\settings\base.py:143 .\settings\base.py:155
 msgid "French"
-msgstr ""
+msgstr "Français"
 
-#: .\settings\base.py:150
-msgid "fr"
-msgstr ""
+#: .\settings\base.py:144 .\settings\base.py:162
+msgid "English"
+msgstr "Anglais"
 
-#: .\templates\bases\base.html:10
+#: .\templates\bases\base.html:9
+msgid "The Tikami"
+msgstr "Le Tikami"
+
+#: .\templates\bases\base.html:14
 msgid "A philosophical and humanistic blog written by a Tikami"
 msgstr "Un blog philosophique et humaniste écrit par un Tikami"
 
-#: .\templates\single_article.html:48
+#: .\templates\bases\footer.html:86
+msgid "Back to top"
+msgstr "Retour en haut"
+
+#: .\templates\bases\header.html:80
+msgid "The Tikami's Twitter"
+msgstr "Le tweeter du Tikami"
+
+#: .\templates\bases\header.html:83
+msgid "The Tikami's Facebook"
+msgstr "Le facebook du Tikami"
+
+#: .\templates\bases\header.html:96
+msgid "Toggle navigation"
+msgstr "Basculer la navigation"
+
+#: .\templates\menu\language_chooser.html:6
+msgid "Change to language:"
+msgstr "Changer de langue :"
+
+#: .\templates\single_article.html:35
 msgid "Last edited:"
 msgstr "Dernière édition :"

@@ -149,14 +149,14 @@ CMS_LANGUAGES = {
             'code': 'fr',
             'hide_untranslated': False,
             'public': True,
-            'name': gettext('fr'),
+            'name': gettext('French'),
         },
         {
             'redirect_on_fallback': True,
             'code': 'en',
             'hide_untranslated': False,
             'public': True,
-            'name': gettext('en'),
+            'name': gettext('English'),
         },
     ],
     'default': {

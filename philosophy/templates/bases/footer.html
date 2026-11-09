@@ -1,4 +1,4 @@
-{% load cms_tags djangocms_alias_tags %}
+{% load cms_tags djangocms_alias_tags i18n %}
 <div class="container">
     {% comment %}
     <div class="row">
@@ -82,7 +82,7 @@
             <p class="copyright">{% static_alias 'copyright' %}</p>
         </div>
         <div class="col-sm-1 col-xs-2 text-right">
-            <a href="#" class="scroll-top"><div class="footer-scrolltop-holder"><span class="ion-ios7-arrow-up footer-scrolltop"></span></div></a>
+            <a href="#" class="scroll-top" title="{% trans "Back to top" %}"><div class="footer-scrolltop-holder"><span class="ion-ios7-arrow-up footer-scrolltop"></span></div></a>
         </div>
     </div><!-- /row -->
 </div><!-- /container -->

@@ -2,8 +2,9 @@
 
 {% if languages|length > 1 %}
 {% for language in languages %}
+{% get_language_info for language.0 as language_info %}
 <li class="lang{% if current_language == language.0 %} active{% endif %}">
-    <a href="{% page_language_url language.0 %}" title="{% trans "Change to language:" %} {{ language.1 }}" class="lang-flag-link">
+    <a href="{% page_language_url language.0 %}" title="{% trans "Change to language:" %} {{ language_info.name_local }}" class="lang-flag-link">
         {% if language.0 == 'fr' %}
         <svg class="lang-flag" viewBox="0 0 3 2" width="20" height="14" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
             <rect width="1" height="2" x="0" fill="#0055A4"/>
