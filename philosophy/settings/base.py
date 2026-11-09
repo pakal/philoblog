@@ -206,6 +206,9 @@ from django_compat_patcher.default_settings import DCP_EXCLUDE_FIXER_IDS as _DCP
 DCP_EXCLUDE_FIXER_IDS = _DCP_DEFAULT_EXCLUDES + [
     # unneeded, and its "callable booleans" fail the auth.C009/C010 checks of Django 6.1
     "fix_behaviour_contrib_auth_user_is_anonymous_is_authenticated_callability",
+    # its HttpResponse._headers alias makes django-cms's page cache store the raw header dict,
+    # so every cache hit crashed with "Header names/values must be of type str"
+    "fix_deletion_http_response_HttpResponseBase_private_headers",
 ]
 
 MIGRATION_MODULES = {
